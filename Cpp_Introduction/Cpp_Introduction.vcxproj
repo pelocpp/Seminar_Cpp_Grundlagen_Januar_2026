@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\Readme.md" />
+    <None Include="Exercises\DynamicIntArray\Resources\cpp_dynamic_array_01.svg" />
+    <None Include="Exercises\DynamicIntArray\Resources\cpp_dynamic_array_02.svg" />
+    <None Include="Exercises\DynamicIntArray\Resources\cpp_dynamic_array_03.svg" />
+    <None Include="Exercises\DynamicIntArray\Resources\cpp_dynamic_array_04.svg" />
+    <None Include="Exercises\Exercises.md" />
+    <None Include="Exercises\Exercises_BankAccount.md" />
+    <None Include="Exercises\Exercises_DynamicArrayTemplate.md" />
+    <None Include="Exercises\Exercises_STL_Lotto.md" />
+    <None Include="Exercises\Exercises_MoreBankAccounts.md" />
+    <None Include="Exercises\Exercises_References_Pointers.md" />
+    <None Include="Exercises\Exercises_STL.md" />
+    <None Include="Exercises\Exercises_STL_PhoneBook.md" />
+    <None Include="Exercises\Exercises_String.md" />
+    <None Include="Exercises\Exercises_Strings.md" />
+    <None Include="Exercises\Exercises_DynamicIntArray.md" />
+    <None Include="Exercises\Exercises_Rectangle.md" />
+    <None Include="Exercises\Exercises_Time.md" />
+    <None Include="Exercises\Exercises_Fraction.md" />
+    <None Include="Exercises\Exercises_Wallet.md" />
+    <None Include="Exercises\STL_PhoneBook\Resources\cpp_hash_table_phonebook.svg" />
+    <None Include="Exercises\STL_PhoneBook\Resources\cpp_vector_phonebook.svg" />
+    <None Include="Markdown\Agenda.md" />
+    <None Include="Markdown\cpp_call_by_reference.svg" />
+    <None Include="Markdown\ClassesObjects.md" />
+    <None Include="Markdown\ClassesObjectsImproved.md" />
+    <None Include="Markdown\Constructors.md" />
+    <None Include="Markdown\cpp_call_by_value.svg" />
+    <None Include="Markdown\cpp_deep_copy.svg" />
+    <None Include="Markdown\cpp_flat_copy.svg" />
+    <None Include="Markdown\cpp_pointer_01.svg" />
+    <None Include="Markdown\cpp_pointer_02.svg" />
+    <None Include="Markdown\cpp_stack_vs_heap_01.svg" />
+    <None Include="Markdown\cpp_stack_vs_heap_02.svg" />
+    <None Include="Markdown\cpp_standard_flat_copy.svg" />
+    <None Include="Markdown\cpp_variable.svg" />
+    <None Include="Markdown\cpp_variable_vs_pointer.svg" />
+    <None Include="Markdown\DynamicMemory.md" />
+    <None Include="Markdown\MemoryManagement.md" />
+    <None Include="Markdown\Exceptions.md" />
+    <None Include="Markdown\FirstOfAll.md" />
+    <None Include="Markdown\HelloWorld.md" />
+    <None Include="Markdown\History.md" />
+    <None Include="Markdown\InstallationGuide.md" />
+    <None Include="Markdown\Inheritance.md" />
+    <None Include="Markdown\Literature.md" />
+    <None Include="Markdown\MoreInheritance.md" />
+    <None Include="Markdown\Namespaces.md" />
+    <None Include="Markdown\OperatorOverloading.md" />
+    <None Include="Markdown\ParameterPassingTechniques.md" />
+    <None Include="Markdown\ProceduralVsOOProgramming.md" />
+    <None Include="Markdown\References.md" />
+    <None Include="Markdown\Roadmap.md" />
+    <None Include="Markdown\RuleOfThree.md" />
+    <None Include="Markdown\Static.md" />
+    <None Include="Markdown\STL.md" />
+    <None Include="Markdown\Streams.md" />
+    <None Include="Markdown\Strings.md" />
+    <None Include="Markdown\Templates.md" />
+    <None Include="Markdown\ToBeDone.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="ClassesObjectsImproved\Main.cpp" />
+    <ClCompile Include="ClassesObjectsImproved\Time.cpp" />
+    <ClCompile Include="ClassesObjects\Main.cpp" />
+    <ClCompile Include="ClassesObjects\Time.cpp" />
+    <ClCompile Include="Constructors\Main.cpp" />
+    <ClCompile Include="Constructors\Time.cpp" />
+    <ClCompile Include="DynamicMemory\Main.cpp" />
+    <ClCompile Include="Exceptions\Main.cpp" />
+    <ClCompile Include="Exercises\BankAccount\BankAccount.cpp" />
+    <ClCompile Include="Exercises\BankAccount\BankAccount_Main.cpp" />
+    <ClCompile Include="Exercises\DynamicArrayTemplate\DynamicArrayTemplate_Main.cpp" />
+    <ClCompile Include="Exercises\DynamicIntArray\DynamicIntArray.cpp" />
+    <ClCompile Include="Exercises\DynamicIntArray\DynamicIntArray_Main.cpp" />
+    <ClCompile Include="Exercises\Exercises.cpp" />
+    <ClCompile Include="Exercises\Fraction\Fraction.cpp" />
+    <ClCompile Include="Exercises\Fraction\Fraction_Main.cpp" />
+    <ClCompile Include="Exercises\MoreBankAccounts\MoreBankAccounts.h" />
+    <ClCompile Include="Exercises\MoreBankAccounts\MoreBankAccounts_Main.cpp" />
+    <ClCompile Include="Exercises\Rectangle\Point.cpp" />
+    <ClCompile Include="Exercises\Rectangle\Rectangle.cpp" />
+    <ClCompile Include="Exercises\Rectangle\Rectangle_Main.cpp" />
+    <ClCompile Include="Exercises\References_Pointers\References_Pointers_Main.cpp" />
+    <ClCompile Include="Exercises\STL\STL_Main.cpp" />
+    <ClCompile Include="Exercises\STL_Lotto\Lottery.cpp" />
+    <ClCompile Include="Exercises\STL_Lotto\Lottery_Main.cpp" />
+    <ClCompile Include="Exercises\STL_Phonebook\PhoneBookVector.cpp" />
+    <ClCompile Include="Exercises\STL_Phonebook\PhoneBookMap.cpp" />
+    <ClCompile Include="Exercises\STL_Phonebook\PhoneBook_Main.cpp" />
+    <ClCompile Include="Exercises\Strings\Strings_Main.cpp" />
+    <ClCompile Include="Exercises\String\String_Main.cpp" />
+    <ClCompile Include="Exercises\String\String.cpp" />
+    <ClCompile Include="Exercises\Time\Time_Main.cpp" />
+    <ClCompile Include="Exercises\Time\Time.cpp" />
+    <ClCompile Include="Exercises\Wallet\Wallet.cpp" />
+    <ClCompile Include="Exercises\Wallet\Wallet_Main.cpp" />
+    <ClCompile Include="HelloWorld\Main.cpp" />
+    <ClCompile Include="Inheritance\Main.cpp" />
+    <ClCompile Include="MemoryManagement\Main.cpp" />
+    <ClCompile Include="MoreInheritance\Main.cpp" />
+    <ClCompile Include="Namespaces\Main.cpp" />
+    <ClCompile Include="OperatorOverloading\Main.cpp" />
+    <ClCompile Include="OperatorOverloading\Time.cpp" />
+    <ClCompile Include="ParameterPassingTechniques\Main_ParametersPassing.cpp" />
+    <ClCompile Include="ParameterPassingTechniques\Main_Time.cpp" />
+    <ClCompile Include="ParameterPassingTechniques\Time.cpp" />
+    <ClCompile Include="ProceduralVsOOProgramming\Example_OO_Programming.cpp" />
+    <ClCompile Include="ProceduralVsOOProgramming\Example_Procedural_Programming.cpp" />
+    <ClCompile Include="ProceduralVsOOProgramming\Main.cpp" />
+    <ClCompile Include="Program.cpp" />
+    <ClCompile Include="References\Main.cpp" />
+    <ClCompile Include="RuleOfThree\BigData.cpp" />
+    <ClCompile Include="RuleOfThree\Main.cpp" />
+    <ClCompile Include="Seminar_Topic_01_Auto.cpp" />
+    <ClCompile Include="Seminar_Topic_02_RValue_LValue.cpp" />
+    <ClCompile Include="Seminar_Topic_03_Move_Semantics.cpp" />
+    <ClCompile Include="Seminar_Topic_04_Lambdas.cpp" />
+    <ClCompile Include="Static\Main.cpp" />
+    <ClCompile Include="STL\Main.cpp" />
+    <ClCompile Include="Streams\Main.cpp" />
+    <ClCompile Include="Strings\Main.cpp" />
+    <ClCompile Include="Templates\Main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ClassesObjectsImproved\Time.h" />
+    <ClInclude Include="ClassesObjects\Time.h" />
+    <ClInclude Include="Constructors\Time.h" />
+    <ClInclude Include="Exercises\BankAccount\BankAccount.h" />
+    <ClInclude Include="Exercises\DynamicArrayTemplate\DynamicArrayTemplate.h" />
+    <ClInclude Include="Exercises\DynamicIntArray\DynamicIntArray.h" />
+    <ClInclude Include="Exercises\Fraction\Fraction.h" />
+    <ClInclude Include="Exercises\Rectangle\Point.h" />
+    <ClInclude Include="Exercises\Rectangle\Rectangle.h" />
+    <ClInclude Include="Exercises\STL_Lotto\Lottery.h" />
+    <ClInclude Include="Exercises\STL_Phonebook\IPhoneBook.h" />
+    <ClInclude Include="Exercises\STL_Phonebook\PhoneBookVector.h" />
+    <ClInclude Include="Exercises\STL_Phonebook\PhoneBookMap.h" />
+    <ClInclude Include="Exercises\String\String.h" />
+    <ClInclude Include="Exercises\Time\Time.h" />
+    <ClInclude Include="Exercises\Wallet\Wallet.h" />
+    <ClInclude Include="OperatorOverloading\Time.h" />
+    <ClInclude Include="ParameterPassingTechniques\Time.h" />
+    <ClInclude Include="RuleOfThree\BigData.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Exercises\String\Resources\String.png" />
+    <Image Include="Images\CertifiedExpertTrainer.png" />
+    <Image Include="Markdown\ASCII_Table.png" />
+    <Image Include="Markdown\Buch_Dirk_Louis.png" />
+    <Image Include="Markdown\Buch_Dummies.png" />
+    <Image Include="Markdown\Buch_Marc_Gregoire.png" />
+    <Image Include="Markdown\Buch_T_Will.png" />
+    <Image Include="Markdown\Cpp.png" />
+    <Image Include="Markdown\Embedded_Cpp.jpg" />
+    <Image Include="Markdown\Github_Mobile_iPad.png" />
+    <Image Include="Markdown\Github_Mobile_iPhone.png" />
+    <Image Include="Markdown\HelloWorld.png" />
+    <Image Include="Markdown\Ken_Thompson_and_Dennis_Ritchie.jpg" />
+    <Image Include="Markdown\OperatorsPrecedence.png" />
+    <Image Include="Markdown\PropertyPages.png" />
+    <Image Include="Markdown\Buch_Thomas_Mahr.jpg" />
+    <Image Include="Markdown\WhatAreYouStudying.png" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{6ba85765-808e-4f53-93ca-5199424ad717}</ProjectGuid>
+    <RootNamespace>CppIntroduction</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>Seminar_Cpp_All_In_One</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <ObjectFileName>$(IntDir)\%(RelativeDir)\%(Filename)</ObjectFileName>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

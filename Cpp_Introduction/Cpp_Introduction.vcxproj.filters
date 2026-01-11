@@ -1,0 +1,620 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Markdown">
+      <UniqueIdentifier>{a112073f-6661-4360-95f8-a2890605aced}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Constructors">
+      <UniqueIdentifier>{b3c5a966-18bd-482a-91fd-d6f6310e3f64}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\References">
+      <UniqueIdentifier>{dd5b3766-0256-468e-98ba-aad0a0dcc208}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\ParameterPassingTechniques">
+      <UniqueIdentifier>{9b012437-9f2b-449b-8b06-034602611898}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\ClassesObjects">
+      <UniqueIdentifier>{c0ba38c6-36d7-45d1-8a6f-cfa8cc8b3c3f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\ClassesObjectsImproved">
+      <UniqueIdentifier>{85b60403-b271-4f31-9110-cf3a956aecd8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\OperatorOverloading">
+      <UniqueIdentifier>{4791d00b-6d2b-4e99-9e41-a764a25b0761}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\RuleOfThree">
+      <UniqueIdentifier>{ff8ccf77-f96f-4b5a-adf5-cd4a08b8535b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\ProceduralVsOOProgramming">
+      <UniqueIdentifier>{b5e03d0e-15b3-48ae-b21c-890158505992}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Namespaces">
+      <UniqueIdentifier>{4913df45-dc9a-4cf6-87b7-4d9d6e809f71}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Templates">
+      <UniqueIdentifier>{a1b31ad0-d153-418d-87f9-27054390f693}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Exceptions">
+      <UniqueIdentifier>{60255ba8-ae53-42cf-85e6-bd9cbe74b91c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Streams">
+      <UniqueIdentifier>{8f7ec9fa-76c5-4ba1-95c8-0ef2df956c27}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Static">
+      <UniqueIdentifier>{a4973b10-46d2-433a-a665-1d4c21bba1f1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\HelloWorld">
+      <UniqueIdentifier>{b427578e-d18c-4159-a75f-e2ec6eade062}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Excercises">
+      <UniqueIdentifier>{bfd29a6c-2782-4710-ab45-c54a1827936c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Excercises\Rectangle">
+      <UniqueIdentifier>{89c5bfe8-acc5-4bae-b402-de5e8fb87610}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Inheritance">
+      <UniqueIdentifier>{05bab861-b100-4bb6-a23d-1ccb47de87bf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Excercises\BankAccount">
+      <UniqueIdentifier>{bfcd318f-ab8f-464a-9045-bf9480cde01e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Strings">
+      <UniqueIdentifier>{409d937a-5ac7-4c8f-825f-e075e2a300e6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Excercises\Strings">
+      <UniqueIdentifier>{51d393d5-b63c-4431-9bc5-acf58aa49115}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\MoreInheritance">
+      <UniqueIdentifier>{5260111a-3e80-4a5e-9665-1b6dc794392c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Excercises\MoreBankAccounts">
+      <UniqueIdentifier>{e342862c-29d2-40ad-aa3c-f2dfa71e6743}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\STL">
+      <UniqueIdentifier>{43d95c8f-5c6a-4714-8ebd-a946ad2ee2e8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Excercises\STL">
+      <UniqueIdentifier>{0c8db045-27c5-4940-a07b-3000c1e1abc7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Excercises\References_Pointers">
+      <UniqueIdentifier>{12ae4579-ad4b-472d-bd4f-08a45d6bc846}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Excercises\DynamicArrayTemplate">
+      <UniqueIdentifier>{936b3ea6-6365-4288-a1df-3144aa9ba718}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Excercises\Time">
+      <UniqueIdentifier>{bc73bc6e-2ea8-4e65-a18a-b77b67943eb7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Excercises\Fraction">
+      <UniqueIdentifier>{51fcbb49-6d3b-423e-bdc0-70f882aa564d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Excercises\String">
+      <UniqueIdentifier>{6482d893-5632-4242-a8ac-7f966e755c12}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Excercises\String\Resources">
+      <UniqueIdentifier>{3b517a1f-a6ce-4412-8832-0886d0957db5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Excercises\STL_PhoneBook">
+      <UniqueIdentifier>{b6b8e616-2e1a-4f3b-bcf8-33ffc2957ad6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Excercises\STL_PhoneBook\Resources">
+      <UniqueIdentifier>{31df9f2d-225d-441c-b35c-09612febbade}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Excercises\STL_PhoneBook\Header Files">
+      <UniqueIdentifier>{7293710d-0eea-4188-a406-9d022611f53c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Excercises\STL_PhoneBook\Source Files">
+      <UniqueIdentifier>{c081545f-053f-4720-a68d-819056865feb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Excercises\STL_Lotto">
+      <UniqueIdentifier>{cb26c968-183a-47fa-b1d2-728aaa7731ad}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Excercises\Wallet">
+      <UniqueIdentifier>{49695647-5a43-404d-b760-bd6da82dfeac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Excercises\DynamicIntArray">
+      <UniqueIdentifier>{513f0937-91db-41bc-b95e-192d1709f579}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Excercises\DynamicIntArray\Resources">
+      <UniqueIdentifier>{8440d379-de60-41b5-82c3-f7990e2752eb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\MemoryManagement">
+      <UniqueIdentifier>{0aac6741-0a39-4cb7-99a4-3c6997d2a563}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\DynamicMemory">
+      <UniqueIdentifier>{4baeb04a-21b7-4c6a-b38c-d6bdd58a079b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Images">
+      <UniqueIdentifier>{75c3f029-c26e-4b44-854d-6e93963714c1}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Markdown\Agenda.md">
+      <Filter>Markdown</Filter>
+    </None>
+    <None Include="Markdown\ClassesObjects.md">
+      <Filter>Markdown</Filter>
+    </None>
+    <None Include="..\Readme.md" />
+    <None Include="Markdown\ClassesObjectsImproved.md">
+      <Filter>Markdown</Filter>
+    </None>
+    <None Include="Markdown\Constructors.md">
+      <Filter>Markdown</Filter>
+    </None>
+    <None Include="Markdown\References.md">
+      <Filter>Markdown</Filter>
+    </None>
+    <None Include="Markdown\ParameterPassingTechniques.md">
+      <Filter>Markdown</Filter>
+    </None>
+    <None Include="Markdown\OperatorOverloading.md">
+      <Filter>Markdown</Filter>
+    </None>
+    <None Include="Markdown\MemoryManagement.md">
+      <Filter>Markdown</Filter>
+    </None>
+    <None Include="Markdown\RuleOfThree.md">
+      <Filter>Markdown</Filter>
+    </None>
+    <None Include="Markdown\ProceduralVsOOProgramming.md">
+      <Filter>Markdown</Filter>
+    </None>
+    <None Include="Markdown\Namespaces.md">
+      <Filter>Markdown</Filter>
+    </None>
+    <None Include="Markdown\Templates.md">
+      <Filter>Markdown</Filter>
+    </None>
+    <None Include="Markdown\Exceptions.md">
+      <Filter>Markdown</Filter>
+    </None>
+    <None Include="Markdown\Strings.md">
+      <Filter>Markdown</Filter>
+    </None>
+    <None Include="Markdown\History.md">
+      <Filter>Markdown</Filter>
+    </None>
+    <None Include="Markdown\Roadmap.md">
+      <Filter>Markdown</Filter>
+    </None>
+    <None Include="Markdown\FirstOfAll.md">
+      <Filter>Markdown</Filter>
+    </None>
+    <None Include="Markdown\Literature.md">
+      <Filter>Markdown</Filter>
+    </None>
+    <None Include="Markdown\ToBeDone.md">
+      <Filter>Markdown</Filter>
+    </None>
+    <None Include="Markdown\cpp_deep_copy.svg">
+      <Filter>Markdown</Filter>
+    </None>
+    <None Include="Markdown\cpp_flat_copy.svg">
+      <Filter>Markdown</Filter>
+    </None>
+    <None Include="Markdown\cpp_standard_flat_copy.svg">
+      <Filter>Markdown</Filter>
+    </None>
+    <None Include="Markdown\Streams.md">
+      <Filter>Markdown</Filter>
+    </None>
+    <None Include="Markdown\InstallationGuide.md">
+      <Filter>Markdown</Filter>
+    </None>
+    <None Include="Markdown\Static.md">
+      <Filter>Markdown</Filter>
+    </None>
+    <None Include="Markdown\Inheritance.md">
+      <Filter>Markdown</Filter>
+    </None>
+    <None Include="Exercises\Exercises.md">
+      <Filter>Excercises</Filter>
+    </None>
+    <None Include="Exercises\Exercises_Rectangle.md">
+      <Filter>Excercises</Filter>
+    </None>
+    <None Include="Markdown\MoreInheritance.md">
+      <Filter>Markdown</Filter>
+    </None>
+    <None Include="Markdown\HelloWorld.md">
+      <Filter>Markdown</Filter>
+    </None>
+    <None Include="Exercises\Exercises_BankAccount.md">
+      <Filter>Excercises</Filter>
+    </None>
+    <None Include="Exercises\Exercises_Strings.md">
+      <Filter>Excercises</Filter>
+    </None>
+    <None Include="Exercises\Exercises_DynamicIntArray.md">
+      <Filter>Excercises</Filter>
+    </None>
+    <None Include="Exercises\Exercises_MoreBankAccounts.md">
+      <Filter>Excercises</Filter>
+    </None>
+    <None Include="Markdown\STL.md">
+      <Filter>Markdown</Filter>
+    </None>
+    <None Include="Exercises\Exercises_STL.md">
+      <Filter>Excercises</Filter>
+    </None>
+    <None Include="Markdown\cpp_stack_vs_heap_01.svg">
+      <Filter>Markdown</Filter>
+    </None>
+    <None Include="Markdown\cpp_stack_vs_heap_02.svg">
+      <Filter>Markdown</Filter>
+    </None>
+    <None Include="Markdown\cpp_call_by_reference.svg">
+      <Filter>Markdown</Filter>
+    </None>
+    <None Include="Markdown\cpp_call_by_value.svg">
+      <Filter>Markdown</Filter>
+    </None>
+    <None Include="Exercises\Exercises_References_Pointers.md">
+      <Filter>Excercises</Filter>
+    </None>
+    <None Include="Exercises\Exercises_DynamicArrayTemplate.md">
+      <Filter>Excercises</Filter>
+    </None>
+    <None Include="Exercises\Exercises_Time.md">
+      <Filter>Excercises</Filter>
+    </None>
+    <None Include="Exercises\Exercises_Fraction.md">
+      <Filter>Excercises</Filter>
+    </None>
+    <None Include="Markdown\cpp_pointer_01.svg">
+      <Filter>Markdown</Filter>
+    </None>
+    <None Include="Markdown\cpp_pointer_02.svg">
+      <Filter>Markdown</Filter>
+    </None>
+    <None Include="Exercises\Exercises_String.md">
+      <Filter>Excercises</Filter>
+    </None>
+    <None Include="Markdown\cpp_variable_vs_pointer.svg">
+      <Filter>Markdown</Filter>
+    </None>
+    <None Include="Exercises\Exercises_STL_PhoneBook.md">
+      <Filter>Excercises</Filter>
+    </None>
+    <None Include="Exercises\Exercises_STL_Lotto.md">
+      <Filter>Excercises</Filter>
+    </None>
+    <None Include="Markdown\cpp_variable.svg">
+      <Filter>Markdown</Filter>
+    </None>
+    <None Include="Exercises\Exercises_Wallet.md">
+      <Filter>Excercises</Filter>
+    </None>
+    <None Include="Exercises\DynamicIntArray\Resources\cpp_dynamic_array_01.svg">
+      <Filter>Excercises\DynamicIntArray\Resources</Filter>
+    </None>
+    <None Include="Exercises\DynamicIntArray\Resources\cpp_dynamic_array_02.svg">
+      <Filter>Excercises\DynamicIntArray\Resources</Filter>
+    </None>
+    <None Include="Exercises\DynamicIntArray\Resources\cpp_dynamic_array_03.svg">
+      <Filter>Excercises\DynamicIntArray\Resources</Filter>
+    </None>
+    <None Include="Exercises\DynamicIntArray\Resources\cpp_dynamic_array_04.svg">
+      <Filter>Excercises\DynamicIntArray\Resources</Filter>
+    </None>
+    <None Include="Markdown\DynamicMemory.md">
+      <Filter>Markdown</Filter>
+    </None>
+    <None Include="Exercises\STL_PhoneBook\Resources\cpp_vector_phonebook.svg">
+      <Filter>Excercises\STL_PhoneBook\Resources</Filter>
+    </None>
+    <None Include="Exercises\STL_PhoneBook\Resources\cpp_hash_table_phonebook.svg">
+      <Filter>Excercises\STL_PhoneBook\Resources</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Program.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Constructors\Main.cpp">
+      <Filter>Source Files\Constructors</Filter>
+    </ClCompile>
+    <ClCompile Include="Constructors\Time.cpp">
+      <Filter>Source Files\Constructors</Filter>
+    </ClCompile>
+    <ClCompile Include="References\Main.cpp">
+      <Filter>Source Files\References</Filter>
+    </ClCompile>
+    <ClCompile Include="ParameterPassingTechniques\Main_ParametersPassing.cpp">
+      <Filter>Source Files\ParameterPassingTechniques</Filter>
+    </ClCompile>
+    <ClCompile Include="ClassesObjects\Main.cpp">
+      <Filter>Source Files\ClassesObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="ClassesObjects\Time.cpp">
+      <Filter>Source Files\ClassesObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="ClassesObjectsImproved\Main.cpp">
+      <Filter>Source Files\ClassesObjectsImproved</Filter>
+    </ClCompile>
+    <ClCompile Include="ClassesObjectsImproved\Time.cpp">
+      <Filter>Source Files\ClassesObjectsImproved</Filter>
+    </ClCompile>
+    <ClCompile Include="OperatorOverloading\Main.cpp">
+      <Filter>Source Files\OperatorOverloading</Filter>
+    </ClCompile>
+    <ClCompile Include="OperatorOverloading\Time.cpp">
+      <Filter>Source Files\OperatorOverloading</Filter>
+    </ClCompile>
+    <ClCompile Include="RuleOfThree\BigData.cpp">
+      <Filter>Source Files\RuleOfThree</Filter>
+    </ClCompile>
+    <ClCompile Include="RuleOfThree\Main.cpp">
+      <Filter>Source Files\RuleOfThree</Filter>
+    </ClCompile>
+    <ClCompile Include="ProceduralVsOOProgramming\Example_OO_Programming.cpp">
+      <Filter>Source Files\ProceduralVsOOProgramming</Filter>
+    </ClCompile>
+    <ClCompile Include="ProceduralVsOOProgramming\Example_Procedural_Programming.cpp">
+      <Filter>Source Files\ProceduralVsOOProgramming</Filter>
+    </ClCompile>
+    <ClCompile Include="ProceduralVsOOProgramming\Main.cpp">
+      <Filter>Source Files\ProceduralVsOOProgramming</Filter>
+    </ClCompile>
+    <ClCompile Include="Namespaces\Main.cpp">
+      <Filter>Source Files\Namespaces</Filter>
+    </ClCompile>
+    <ClCompile Include="Templates\Main.cpp">
+      <Filter>Source Files\Templates</Filter>
+    </ClCompile>
+    <ClCompile Include="Exceptions\Main.cpp">
+      <Filter>Source Files\Exceptions</Filter>
+    </ClCompile>
+    <ClCompile Include="Streams\Main.cpp">
+      <Filter>Source Files\Streams</Filter>
+    </ClCompile>
+    <ClCompile Include="Static\Main.cpp">
+      <Filter>Source Files\Static</Filter>
+    </ClCompile>
+    <ClCompile Include="HelloWorld\Main.cpp">
+      <Filter>Source Files\HelloWorld</Filter>
+    </ClCompile>
+    <ClCompile Include="Exercises\Rectangle\Point.cpp">
+      <Filter>Excercises\Rectangle</Filter>
+    </ClCompile>
+    <ClCompile Include="Exercises\Rectangle\Rectangle.cpp">
+      <Filter>Excercises\Rectangle</Filter>
+    </ClCompile>
+    <ClCompile Include="Exercises\Rectangle\Rectangle_Main.cpp">
+      <Filter>Excercises\Rectangle</Filter>
+    </ClCompile>
+    <ClCompile Include="Inheritance\Main.cpp">
+      <Filter>Source Files\Inheritance</Filter>
+    </ClCompile>
+    <ClCompile Include="Exercises\Exercises.cpp">
+      <Filter>Excercises</Filter>
+    </ClCompile>
+    <ClCompile Include="Exercises\BankAccount\BankAccount.cpp">
+      <Filter>Excercises\BankAccount</Filter>
+    </ClCompile>
+    <ClCompile Include="Exercises\BankAccount\BankAccount_Main.cpp">
+      <Filter>Excercises\BankAccount</Filter>
+    </ClCompile>
+    <ClCompile Include="Strings\Main.cpp">
+      <Filter>Source Files\Strings</Filter>
+    </ClCompile>
+    <ClCompile Include="Exercises\Strings\Strings_Main.cpp">
+      <Filter>Excercises\Strings</Filter>
+    </ClCompile>
+    <ClCompile Include="MoreInheritance\Main.cpp">
+      <Filter>Source Files\MoreInheritance</Filter>
+    </ClCompile>
+    <ClCompile Include="Exercises\MoreBankAccounts\MoreBankAccounts_Main.cpp">
+      <Filter>Excercises\MoreBankAccounts</Filter>
+    </ClCompile>
+    <ClCompile Include="STL\Main.cpp">
+      <Filter>Source Files\STL</Filter>
+    </ClCompile>
+    <ClCompile Include="Exercises\STL\STL_Main.cpp">
+      <Filter>Excercises\STL</Filter>
+    </ClCompile>
+    <ClCompile Include="Exercises\References_Pointers\References_Pointers_Main.cpp">
+      <Filter>Excercises\References_Pointers</Filter>
+    </ClCompile>
+    <ClCompile Include="Exercises\DynamicArrayTemplate\DynamicArrayTemplate_Main.cpp">
+      <Filter>Excercises\DynamicArrayTemplate</Filter>
+    </ClCompile>
+    <ClCompile Include="Exercises\Time\Time_Main.cpp">
+      <Filter>Excercises\Time</Filter>
+    </ClCompile>
+    <ClCompile Include="Exercises\Time\Time.cpp">
+      <Filter>Excercises\Time</Filter>
+    </ClCompile>
+    <ClCompile Include="Exercises\Fraction\Fraction.cpp">
+      <Filter>Excercises\Fraction</Filter>
+    </ClCompile>
+    <ClCompile Include="Exercises\Fraction\Fraction_Main.cpp">
+      <Filter>Excercises\Fraction</Filter>
+    </ClCompile>
+    <ClCompile Include="Exercises\String\String_Main.cpp">
+      <Filter>Excercises\String</Filter>
+    </ClCompile>
+    <ClCompile Include="Exercises\String\String.cpp">
+      <Filter>Excercises\String</Filter>
+    </ClCompile>
+    <ClCompile Include="Exercises\MoreBankAccounts\MoreBankAccounts.h">
+      <Filter>Excercises\MoreBankAccounts</Filter>
+    </ClCompile>
+    <ClCompile Include="ParameterPassingTechniques\Time.cpp">
+      <Filter>Source Files\ParameterPassingTechniques</Filter>
+    </ClCompile>
+    <ClCompile Include="ParameterPassingTechniques\Main_Time.cpp">
+      <Filter>Source Files\ParameterPassingTechniques</Filter>
+    </ClCompile>
+    <ClCompile Include="Exercises\STL_Phonebook\PhoneBookVector.cpp">
+      <Filter>Excercises\STL_PhoneBook\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Exercises\STL_Phonebook\PhoneBookMap.cpp">
+      <Filter>Excercises\STL_PhoneBook\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Exercises\STL_Phonebook\PhoneBook_Main.cpp">
+      <Filter>Excercises\STL_PhoneBook</Filter>
+    </ClCompile>
+    <ClCompile Include="Exercises\STL_Lotto\Lottery.cpp">
+      <Filter>Excercises\STL_Lotto</Filter>
+    </ClCompile>
+    <ClCompile Include="Exercises\STL_Lotto\Lottery_Main.cpp">
+      <Filter>Excercises\STL_Lotto</Filter>
+    </ClCompile>
+    <ClCompile Include="Exercises\Wallet\Wallet.cpp">
+      <Filter>Excercises\Wallet</Filter>
+    </ClCompile>
+    <ClCompile Include="Exercises\Wallet\Wallet_Main.cpp">
+      <Filter>Excercises\Wallet</Filter>
+    </ClCompile>
+    <ClCompile Include="Exercises\DynamicIntArray\DynamicIntArray.cpp">
+      <Filter>Excercises\DynamicIntArray</Filter>
+    </ClCompile>
+    <ClCompile Include="Exercises\DynamicIntArray\DynamicIntArray_Main.cpp">
+      <Filter>Excercises\DynamicIntArray</Filter>
+    </ClCompile>
+    <ClCompile Include="DynamicMemory\Main.cpp">
+      <Filter>Source Files\DynamicMemory</Filter>
+    </ClCompile>
+    <ClCompile Include="MemoryManagement\Main.cpp">
+      <Filter>Source Files\MemoryManagement</Filter>
+    </ClCompile>
+    <ClCompile Include="Seminar_Topic_01_Auto.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Seminar_Topic_02_RValue_LValue.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Seminar_Topic_03_Move_Semantics.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Seminar_Topic_04_Lambdas.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Constructors\Time.h">
+      <Filter>Source Files\Constructors</Filter>
+    </ClInclude>
+    <ClInclude Include="ClassesObjects\Time.h">
+      <Filter>Source Files\ClassesObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="ClassesObjectsImproved\Time.h">
+      <Filter>Source Files\ClassesObjectsImproved</Filter>
+    </ClInclude>
+    <ClInclude Include="OperatorOverloading\Time.h">
+      <Filter>Source Files\OperatorOverloading</Filter>
+    </ClInclude>
+    <ClInclude Include="RuleOfThree\BigData.h">
+      <Filter>Source Files\RuleOfThree</Filter>
+    </ClInclude>
+    <ClInclude Include="Exercises\Rectangle\Point.h">
+      <Filter>Excercises\Rectangle</Filter>
+    </ClInclude>
+    <ClInclude Include="Exercises\Rectangle\Rectangle.h">
+      <Filter>Excercises\Rectangle</Filter>
+    </ClInclude>
+    <ClInclude Include="Exercises\BankAccount\BankAccount.h">
+      <Filter>Excercises\BankAccount</Filter>
+    </ClInclude>
+    <ClInclude Include="Exercises\DynamicArrayTemplate\DynamicArrayTemplate.h">
+      <Filter>Excercises\DynamicArrayTemplate</Filter>
+    </ClInclude>
+    <ClInclude Include="Exercises\Time\Time.h">
+      <Filter>Excercises\Time</Filter>
+    </ClInclude>
+    <ClInclude Include="Exercises\Fraction\Fraction.h">
+      <Filter>Excercises\Fraction</Filter>
+    </ClInclude>
+    <ClInclude Include="Exercises\String\String.h">
+      <Filter>Excercises\String</Filter>
+    </ClInclude>
+    <ClInclude Include="ParameterPassingTechniques\Time.h">
+      <Filter>Source Files\ParameterPassingTechniques</Filter>
+    </ClInclude>
+    <ClInclude Include="Exercises\STL_Phonebook\IPhoneBook.h">
+      <Filter>Excercises\STL_PhoneBook\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Exercises\STL_Phonebook\PhoneBookVector.h">
+      <Filter>Excercises\STL_PhoneBook\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Exercises\STL_Phonebook\PhoneBookMap.h">
+      <Filter>Excercises\STL_PhoneBook\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Exercises\STL_Lotto\Lottery.h">
+      <Filter>Excercises\STL_Lotto</Filter>
+    </ClInclude>
+    <ClInclude Include="Exercises\Wallet\Wallet.h">
+      <Filter>Excercises\Wallet</Filter>
+    </ClInclude>
+    <ClInclude Include="Exercises\DynamicIntArray\DynamicIntArray.h">
+      <Filter>Excercises\DynamicIntArray</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Markdown\Cpp.png">
+      <Filter>Markdown</Filter>
+    </Image>
+    <Image Include="Markdown\WhatAreYouStudying.png">
+      <Filter>Markdown</Filter>
+    </Image>
+    <Image Include="Markdown\OperatorsPrecedence.png">
+      <Filter>Markdown</Filter>
+    </Image>
+    <Image Include="Markdown\Buch_Dirk_Louis.png">
+      <Filter>Markdown</Filter>
+    </Image>
+    <Image Include="Markdown\Buch_Dummies.png">
+      <Filter>Markdown</Filter>
+    </Image>
+    <Image Include="Markdown\Buch_T_Will.png">
+      <Filter>Markdown</Filter>
+    </Image>
+    <Image Include="Markdown\PropertyPages.png">
+      <Filter>Markdown</Filter>
+    </Image>
+    <Image Include="Markdown\Github_Mobile_iPad.png">
+      <Filter>Markdown</Filter>
+    </Image>
+    <Image Include="Markdown\Github_Mobile_iPhone.png">
+      <Filter>Markdown</Filter>
+    </Image>
+    <Image Include="Markdown\HelloWorld.png">
+      <Filter>Markdown</Filter>
+    </Image>
+    <Image Include="Markdown\Buch_Thomas_Mahr.jpg">
+      <Filter>Markdown</Filter>
+    </Image>
+    <Image Include="Markdown\ASCII_Table.png">
+      <Filter>Markdown</Filter>
+    </Image>
+    <Image Include="Exercises\String\Resources\String.png">
+      <Filter>Excercises\String\Resources</Filter>
+    </Image>
+    <Image Include="Markdown\Embedded_Cpp.jpg">
+      <Filter>Markdown</Filter>
+    </Image>
+    <Image Include="Markdown\Buch_Marc_Gregoire.png">
+      <Filter>Markdown</Filter>
+    </Image>
+    <Image Include="Markdown\Ken_Thompson_and_Dennis_Ritchie.jpg">
+      <Filter>Markdown</Filter>
+    </Image>
+    <Image Include="Images\CertifiedExpertTrainer.png">
+      <Filter>Images</Filter>
+    </Image>
+  </ItemGroup>
+</Project>
