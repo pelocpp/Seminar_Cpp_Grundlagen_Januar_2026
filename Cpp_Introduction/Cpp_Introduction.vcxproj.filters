@@ -617,4 +617,7 @@
       <Filter>Images</Filter>
     </Image>
   </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\Notizzettel.txt" />
+  </ItemGroup>
 </Project>

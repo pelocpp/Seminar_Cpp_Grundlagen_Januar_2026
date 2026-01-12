@@ -1,4 +1,58 @@
 Seminar C++ Grundlagen und weiterführende Aspekte
 =================================================
 
+Peter Loos
+
+30+ Jahre // 20 Jahre Production (C/C++)
+             20 Teaching // Java, C#, JavaScript, Mobile Apps (Android), Flutter (Dart)
+
+Knapp 20 Jahre: Siemens Technik Akademie 
+
+
+
+Back-to-the-Roots: C++
+
+== Classic C++
+== Modern C++ (C++ 11)
+
+
+C# -- Kenntnisse
+
+Java, Python, Unity, TypeScript (JavaScript)
+
+Welche Sprachen ...
+=> Umstieg von C# nach C++
+Was sind meine Erwartungen ...
+Was MUSS drin sein ...
+Was brauche ich ...
+
+Ziel: C++ kennen lernen
+
+=====================================================
+
+2 Tools:
+
+a) Unterlagen:
+
+   Github:
+
+   https://github.com/pelocpp
+
+b) Visual Studio Community (2022 / 2026)
+
+=====================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

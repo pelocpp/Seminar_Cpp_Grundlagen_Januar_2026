@@ -183,6 +183,9 @@
     <Image Include="Markdown\Buch_Thomas_Mahr.jpg" />
     <Image Include="Markdown\WhatAreYouStudying.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\Notizzettel.txt" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
