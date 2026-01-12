@@ -30,6 +30,12 @@ Ziel: C++ kennen lernen
 
 =====================================================
 
+Mittagspause: 12.30 
+
+10.30   // 15.00 ....
+
+=====================================================
+
 2 Tools:
 
 a) Unterlagen:
@@ -43,16 +49,190 @@ b) Visual Studio Community (2022 / 2026)
 =====================================================
 
 
+3 Tage C++ Komplett
+
+a) C++ Grundlagen
+
+b) Modern C++
 
 
+=====================================================
+
+Architektur:
+============
+
+Ein Vergleich von C# und C++:
+
+C#: Virtuelle Maschine (CLR)
+
+2 Übersetzungsvorgänge:
+
+A) C# ==> IL
+
+B) JIT: Just-in-Time Compiler: IL => Maschinecode
+
+-----------------------------------------------------
+
+C++:  C++ => Maschinecode
+
+Tooling:
+
+i)  C++ - Compiler
+ii) Linker
+
+Verfeinerung:
+-------------
+
+Ein C++ Projekt besteht aus vielen Dateien.
+
+C++ => binäres Format (.obj-File // o.-Files )
+
+Spezifikation:  Common Object File Format
+
+Linker: Viele .obj-Dateien ==> Maschinencode (.exe)
+
+==============================================================
+
+Wo liegen Objekte in einem C## / C++ - Programm ???
+
+Im Speicher :)
+
+== Globale Daten
+== Stack
+== Heap
+
+==============================================================
+
+Stack: Ist ein Speicherbereich :)
+
+Kann nicht wahlweise zugegriffen werden ?!?!?
+
+Nur über den Stackpointer:
+
+Wort Stapel:  Bücherstapel
+
+Wozu ist der Stack so konzipiert ??????
+
+A) Lokale Variablen zu realisieren.
+b) Wo geht es nach einem Unterprogrammaufruf weiter ???????
+
+   Es werden PRO Aufruf eines Unterprogramms die Rücksprungadressen
+   auch auf dem Stapel abgelegt.
 
 
+Worüber reden wir gerade:  Stackframe
+
+==============================================================
+
+Heap:
+
+Ist auch ein Speicherbereich.
+
+Wie wird auf den Heap zugegriffen ???
+
+Identisch: C# / C++   Allgemeinen Fall  (  C#:  class  )
+
+new   ==>  Heap  
+
+AUSNAHME:   (( struct:   Stack ))
+
+==============================================================
+
+Stack: Ist ein Speicherbereich :)
+
+Uhhhh: Ein Detail in C#: struct vs. class // Stack vs. Heap
+
+Beispiele:
+
+int malZwei (int a)
+{
+   int tmp = a;  // Stack
+   tmp = 2 * a;
+   return tmp;
+}
+
+main ()
+{
+   int a1 = malZwei(5);
+   ...
+
+   ....
+
+   int a2 = malZwei(10);
+   ...
+
+}
 
 
+=======================================================
+
+ACHTUNG // VERGLEICH
+
+C#  ===> C++
+
+Klasse Rectangle:   class Rectangle
 
 
+void tueWas_CSharp()
+{
+    Rectangle rect1;    // rect ist eine "Referenz" // Pointer // Adresse
+
+    Rectangle rect2 = new Rectangle(10, 20, 40, 50);
+}
+
+Eine Referenz ist ein Doppel-Zeiger:  
+
+Zeiger ==> Bucket-Liste // Liste der Objekt-Adressen // ==> Zeiger der tatsächlichen Objekte
+
+new: 2 Funktionalitäten:
+
+     a) Speicher auf dem Heap bereitstellem
+     b) Den Konstruktor auf diesem Stück Speicher ausführen
+
+Wann wird dieses Objekt freigegeben:
+
+     a) Wenn es KEINE REFERENZ (Pointer) mehr gibt, der auf dieses Objekt zeigt.
+
+     b) Wer gibt das Unterprogramm frei: SW:  Garbage Collector // GC
+
+        ==> Es gibt in der Tat mehrere REALISIERUNGEN eines solchen GC
+
+        a) Desktop Variante:   Faule Variante (Lazy): Erst, wenn der Speicher knapp wird
+        b) Embedded Variante:  Zügig, um Engpässe im Speicher zu vermeiden.
+
+// ----------------------------------------------
+
+// C Sharp
+void tueWas_CSharp()
+{
+    Rectangle rect;    // rect ist eine "Referenz" // Pointer // Adresse // null
+}
+
+// C++
+void tueWas_Cpp()
+{
+    // dieses Objekt liegt am STACK
+    Rectangle rect1 (10, 10, 30, 40);    // rect ist ein vollständiges Objekt // liegt am STACK !!!
+
+    // dieses Objekt liegt am HEAP
+    // In C++ muss der Typ POINTER konkret definiert werden
+    Rectangle* rect2 = new Rectangle (10, 10, 30, 40);
+
+   // delete rect2;
+}
+
+Gretchenfrage: Wer gibt (C++) das Objekt am Heap  (rect2)  wieder frei ???
+   Wir // der entwickler // es muss EXPLIZIT im Programm freigegeben werden !!!
 
 
+ARCHITEKTUR:
 
+C#:     Referenz-baasierte Sprache  (Heap  // new // GC )
 
+C++:    Referenz-baasierte Sprache  (Heap  // new // delete)
 
+        Stack-basierte Sprache      (Stack)
+
+===========================================================
+
+11 Uhr
