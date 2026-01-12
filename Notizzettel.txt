@@ -30,6 +30,12 @@ Ziel: C++ kennen lernen
 
 =====================================================
 
+ToDo-Liste:
+
+this: check
+
+=====================================================
+
 Mittagspause: 12.30 
 
 10.30   // 15.00 ....
@@ -57,6 +63,46 @@ b) Modern C++
 
 
 =====================================================
+
+Beobachtung:
+
+Java, C#, Python:
+
+   ==> Höherstehenden Schichten eines SW-Architektur
+       zB: Backend Web-Server // Desktopanwendung (C# / .NET Framework)
+
+
+C++:
+
+   ==> Tiefere Schichten eines SW-Architektur
+
+   Embedded SW // System-SW // Hardware-nahe SW // Desktopanwendung
+   System Tools:  Compiler , Debugger  
+
+
+=====================================================
+
+Beobachtung:
+
+C:  ca. 1980
+
+    Keine OO // rein prozedural
+
+C++: ca. 1985
+
+C ist vom Sprachumfang ECHT in C++ enthalten. (99%)
+
+Konsequenz:
+
+Manche Sprachmittel gibt es in C++ doppelt:
+
+== Pointer   ( C )
+== Referenz  ( C++ )
+
+Fazit: Habe ich so eine Situation gegeben: C++ Sprachmittel (nicht: C)
+
+=====================================================
+
 
 Architektur:
 ============
@@ -90,6 +136,11 @@ C++ => binäres Format (.obj-File // o.-Files )
 Spezifikation:  Common Object File Format
 
 Linker: Viele .obj-Dateien ==> Maschinencode (.exe)
+
+Bemerkung:
+
+a) Es gibt Syntax-Fehler:  Grammatik ("compile")
+b) Es gibt Linker-Fehler:  zB doppeltes main
 
 ==============================================================
 
@@ -235,4 +286,300 @@ C++:    Referenz-baasierte Sprache  (Heap  // new // delete)
 
 ===========================================================
 
-11 Uhr
+Ein C++ Projekt mit Visual Studio:
+
+a) Grammatik / Syntax
+
+   == Compile
+
+b) Das Programm bauen
+
+   == Build
+
+Vergleich:
+
+C#:   2-Pass Compiler
+
+C++:  1-Pass Compiler
+
+Alles muss bei einem Übersetzungsdurchlauf bekannt sein !!!
+
+===========================================================
+
+Ein objekt-orientiertes Programm in C++
+---------------------------------------
+
+Klasse:  2 Dateien
+
+a) Header-Datei
+
+   ===> Kunden // Benutzer
+
+b) Implementierungs-Datei
+
+   ===> Library // Binärformat
+
+Beispiel:
+
+Uhrzeit:  Klasse Time
+
+Stunden, Minuten und Sekunden.
+
+=============================
+
+Ab C++ 20 / 23:  
+
+The Return of printf (C#:  println)   // Python
+
+============================
+
+C++ Bibliothek:   STL   Standard Template Library
+
+Template == ähnlich zu Generics
+
+=========================================================
+
+C#: Sprachfeature: Property  // implicit get / set
+
+C++: So nicht vorhanden.
+
+   getter / setter
+
+=========================================================
+
+Ein Kern Feature der OO:
+
+Jeder Objekt hat zu JEDEM Zeitpunkt GÜLTIGE Werte in seinen
+Instanzvariablen.
+
+a) Initialisierung (Konstruktoren)
+
+b) Während des Lebensdauer eines Objekts (getter/setter // Analogie: Properties C#)
+
+
+=========================================================
+
+Zu Konstruktoren:
+
+A) Hat die Klasse KEINEN Konstruktor definiert:
+
+   Dann wird der Standard-Konstruktor AUTOMATISCH erzeugt.
+
+   Vorsicht: KEINE Vorbelegung mit Null !!!!!!!!!!!!!!
+
+B) Hat die Klasse EINEN oder MEHRERE Konstruktor definiert:
+
+   Dann sind nur die verfügbar, die es auch gibt.
+
+==============================================================
+
+Stilistik:
+
+this:  Konzipiert als ZEIGER auf das aktuelle Objekt.
+
+class Time:
+
+Time* this;
+
+==============================================================
+
+Aufgabe:
+
+Bankkonto
+
+class BankAccount
+
+== Member: m_balance (double, int)
+
+== Einzahlen, Abheben, Ausgeben
+
+== getter: getBalance
+
+2 Dateien: Header-File, Implementierungs-File
+
+3. Datei: Programm: 
+
+=================================================================
+
+Header-Datei:
+
+Ausnahme von der Regel:
+
+Methoden sind im Header-File implementierbar.
+
+Pro:
+
+== Einfachere Hantierbarkeit
+
+Kontra:
+
+== Eigentlich ist das Header-File für den Benutzer der Klasse konzipiert.
+   (  inkl. der Implementierung ??? )
+
+=================================================================
+
+Übergabe von Objekten an Methoden
+---------------------------------
+
+Parameterübergabe:
+------------------
+
+
+ARCHITEKTUR:
+
+C#:     Referenz-basierte Sprache  (Heap  // new // GC )
+
+C++:    Referenz-basierte Sprache  (Heap  // new // delete)
+
+        Stack-basierte Sprache      (Stack)
+
+
+C++ / C:
+
+Parameterübergabe: Per DEFAULT: Call-by-VALUE // Call-by-COPY
+
+Wie kann man in Unterprogrammen auf ORIGINALE zugreifen ?????????????
+
+Wir haben per Default:  Call-by-COPY
+
+2 Lösungen:
+
+A) Pointer   ( C )     // real C/C++
+
+
+new: <================ Pointer
+
+
+
+Wert hinter der Adresse:   05 00 00 00
+
+                            0a 00 00 00
+
+
+
+
+B) Referenz  ( C++ )   // leichter lesbare / schreibbare Weise 
+
+Merkhilfe: Eine Referenz ist im Prinzip die ADRESSE einer Variablen,
+            nur mit einer anderen Schreibweise (leichter lesbar sein)
+
+Fazit:
+
+Wozu Referenzen:
+
+Um am STACK Objekte mit ihren ADRESSEN zu bewegen.
+
+Was ist mit dem HEAP ???
+
+Hier gibt es nur POINTER, die mit new ermittelt werden.
+
+Eine Kopie eines Pointers ist KEINE Kopie eines Objekts.
+
+=====================================
+
+Adresse:
+
+void*: Das gibt es so nicht
+
+int*:  Eine int-Variable belegt 4 Bytes im Speicher // sizeof
+
+       Damit sind bei einer int* Adresse  4 BYTEs relevant.
+
+
+Wert hinter der Adresse:   05 00 00 00
+
+                           0a 00 00 00
+
+
+// ===================================================
+
+Was ist ein cast:  Typumwandlung ...
+
+
+========================================================
+
+C:   Pointer-Arithmetik
+     Adress-Arithmetik
+
+
+         ++ip;   Man kann eine Adresse als ganze Zahl auffassen.
+                 Folglich kann man 1 draufzählen.
+
+                 1024 => 1025: NEIN
+                 1024 => 1028: Korrekt
+
+Wann brauche ich die Adress-Arithmetik:
+
+Bei dynamscher Speicherverwaltung:
+
+new : 100 int Werte  ==> Anfangsadresse.
+
+=======================================================
+
+Anwendung von Referenzen:
+-------------------------
+
+Feature:  Schutz von Objekten // 95%: Das gibt es so in C# nicht ....
+
+=========================================================
+
+'int Time::getHours(void)': 
+
+cannot convert 'this' pointer from 'const Time' to 'Time &'
+
+Trick / Hinweis: wenn in der Fehlermeldung 'const' steht, dann ist das in der Regel ein FEHLENDES const.
+
+Frage / Problem: Wo ???
+
+Beobachtung: Einmal 'const', immer 'const'
+
+=========================================================
+
+Ist const nur für die Qualität des Codes (Schutz von Originalen) eine Hilfe ???
+
+NEIN.
+
+2 Aspekt:
+
+Funktionale Programmiersprachen:  Ge-hyped
+
+Performanz:  Merkmal einer Funktion:  Kennt keine Instanzvariablen.
+
+Optimierung:  Pipelining.
+
+Geht nicht bei OO:  ==> State // Member
+
+Ausnahme:  'const'  ==> KEIN schreibender Zugriff auf State
+
+ ==> besser optimieren.
+
+80%:  Java, C#, C++ ...........
+
+// =========================================================
+
+Call by Referenz ist wichtig bei Objekten:
+
+KEINE unnütze Kopie.
+
+Wie sieht es bei elementaren Variablen aus ???
+
+Hier ist call-by-Copy SCHNELLER
+
+EAX: Akku // Rechenregister einer CPU // Hauptregister
+
+RAX:  Register für Adressen
+
+Call-by-Copy:
+
+    int m = value;
+00007FF7434B755F  mov         eax,dword ptr [value]  
+00007FF7434B7565  mov         dword ptr [m],eax  
+
+
+Call-by-Ref:
+
+    int m = value;
+00007FF7434B75F0  mov         rax,qword ptr [value]  
+00007FF7434B75F7  mov         eax,dword ptr [rax]  
+00007FF7434B75F9  mov         dword ptr [m],eax  
+
