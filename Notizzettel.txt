@@ -583,3 +583,102 @@ Call-by-Ref:
 00007FF7434B75F7  mov         eax,dword ptr [rax]  
 00007FF7434B75F9  mov         dword ptr [m],eax  
 
+==============================================================
+
+Überladen von Operatoren
+
+Beispiel:
+
+Vergleich von Objekten
+
+C#:
+
+Universelle Basisklasse Object:   equals  // Überschreiben
+
+Ähnliches zu einem speziellen Operator:  Indexer  // Ähnlich zum operator[]
+
+C++:
+
+operator ==
+
+Technisch:  
+
+Wie das Schreiben einer Methode
+Name der Methode:  operator ==
+
+BEMERKUNG: 
+
+Es gibt ZWEI Möglichkeiten, Operatoren zu Überladen:
+
+a) Als "Methode" der Klasse
+
+B) Als globale Funktion
+
+
+=================================================================
+
+Scharfes Schwert:   friendship   Keyword:   friend       // Clean Code 
+
+Für "Freunde" gilt: Aus private wird public :)
+
+=================================================================
+
+
+Dynamische Daten
+
+== new und delete
+
+ACHTUNG:
+
+Es gibt new und delete in ZWEI Ausprägungen !!!
+
+new typ    Skalare new
+delete ptr
+
+new[] typ     Array new
+delete[] ptr
+
+
+
+Vergleich zu C#:
+
+    int[] array = new int[5];
+
+    In C# ist array ein OBJECT // length()
+
+    array.length();
+
+==================================================
+
+Zeiger-Arithmetik:
+
+In C++ mit Adressen arbeiten:
+
+
+int* ip = new int[5];
+
+// Annahme: In ip: 0x1024
+
+ip + 1 
+
+ip:     0x1024
+ip + 1: 0x1028
+
+// VORSICHT:
+
+// void*
+
+double* dp = new ....                // double: 8 bytes
+
+dp:       1000;
+
+dp + 1:   1008;
+
+char* cp;     // char: 1 Byte  // Unicode // WChar
+
+cp:     2000
+
+cp + 1: 2001
+
+11:05
+=====
