@@ -917,6 +917,108 @@ Trick, damit ich ich nicht "Anzahl der Container"  neue Klassen lernen muss:
 
 Algorithmen
 
-Übung
+============================================================
 
-15:10
+STL-Container
+STL-Iteratoren
+Aufrufbare Objekte
+STL-Algorithmen
+
+============================================================
+
+Aufrufbare Objekte:
+
+Was ist das ???
+
+class Foo ...
+Foo obj;
+obj.method();
+
+Frage: Kann man 'obj(params)' auch schreiben
+
+Wieso: obj.method (params);
+
+Eine Klasse, die den Operator operator() überlädt, nennt man 'aufrufbar'.
+
+============================================================
+
+
+STL-Algorithmen
+
+Diese benötigen:
+
+   == Einen Bereich (von wo nach wo)
+   == Eine Funktion, die möglicherweise auf ein Element anzuwenden ist.
+      (Schnittstelle)
+
+Technisch:
+
+3 Möglichkeiten:
+
+i)   globale Funktion       - Classic C++
+ii)  Aufrufbares Objekt     - Classic C++
+iii) Lambda                 - Modern C++
+
+====================================================================
+
+Teuflischen Folge
+
+Zahlenfolge
+
+Startwert:  n, ganze, positive Zahl
+
+Folgewert:
+
+   Wenn n gerade:   n / 2
+   Wenn n ungerade: 3 * n + 1
+
+Beispiel:
+
+Startwert: 7, 22, 11, 34, 17, 52, 26, 13, 40, 20, 10, 5, 16, 8, 4, 2, 1.
+
+Bei 1 ist die Folge zu Ende.
+
+Why "teuflisch":  
+
+Man konnte bis heute NICHT beweisen, dass JEDE teuflische Folge ENDLICH ist.
+
+3, 10, 5, 16, ...
+
+Collatz
+
+Aufgabe:
+
+a) Startwert: int n = 7;   // Einprogrammieren
+
+b) std::vector
+
+c) Das vector mit den Werten der teuflische Folge füllen.
+
+d) Den Vektor mit std::for_each ausgeben.
+
+
+
+===========================================
+
+class MyDevilsSequence
+{
+private:
+    int m_start;
+
+public:
+    MyDevilsSequence() {
+        m_start = 7;
+    }
+
+    MyDevilsSequence(int start) {
+        m_start = start;
+    }
+
+    void operator() () {
+
+           // alles rein // init
+    }
+};
+
+
+
