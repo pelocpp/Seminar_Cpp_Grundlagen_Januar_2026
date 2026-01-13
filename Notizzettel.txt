@@ -1,4 +1,4 @@
-Seminar C++ Grundlagen und weiterf¸hrende Aspekte
+ÔªøSeminar C++ Grundlagen und weiterf√ºhrende Aspekte
 =================================================
 
 Peter Loos
@@ -68,7 +68,7 @@ Beobachtung:
 
 Java, C#, Python:
 
-   ==> Hˆherstehenden Schichten eines SW-Architektur
+   ==> H√∂herstehenden Schichten eines SW-Architektur
        zB: Backend Web-Server // Desktopanwendung (C# / .NET Framework)
 
 
@@ -111,7 +111,7 @@ Ein Vergleich von C# und C++:
 
 C#: Virtuelle Maschine (CLR)
 
-2 ‹bersetzungsvorg‰nge:
+2 √úbersetzungsvorg√§nge:
 
 A) C# ==> IL
 
@@ -131,7 +131,7 @@ Verfeinerung:
 
 Ein C++ Projekt besteht aus vielen Dateien.
 
-C++ => bin‰res Format (.obj-File // o.-Files )
+C++ => bin√§res Format (.obj-File // o.-Files )
 
 Spezifikation:  Common Object File Format
 
@@ -158,20 +158,20 @@ Stack: Ist ein Speicherbereich :)
 
 Kann nicht wahlweise zugegriffen werden ?!?!?
 
-Nur ¸ber den Stackpointer:
+Nur √ºber den Stackpointer:
 
-Wort Stapel:  B¸cherstapel
+Wort Stapel:  B√ºcherstapel
 
 Wozu ist der Stack so konzipiert ??????
 
 A) Lokale Variablen zu realisieren.
 b) Wo geht es nach einem Unterprogrammaufruf weiter ???????
 
-   Es werden PRO Aufruf eines Unterprogramms die R¸cksprungadressen
+   Es werden PRO Aufruf eines Unterprogramms die R√ºcksprungadressen
    auch auf dem Stapel abgelegt.
 
 
-Wor¸ber reden wir gerade:  Stackframe
+Wor√ºber reden wir gerade:  Stackframe
 
 ==============================================================
 
@@ -233,12 +233,12 @@ void tueWas_CSharp()
 
 Eine Referenz ist ein Doppel-Zeiger:  
 
-Zeiger ==> Bucket-Liste // Liste der Objekt-Adressen // ==> Zeiger der tats‰chlichen Objekte
+Zeiger ==> Bucket-Liste // Liste der Objekt-Adressen // ==> Zeiger der tats√§chlichen Objekte
 
-new: 2 Funktionalit‰ten:
+new: 2 Funktionalit√§ten:
 
      a) Speicher auf dem Heap bereitstellem
-     b) Den Konstruktor auf diesem St¸ck Speicher ausf¸hren
+     b) Den Konstruktor auf diesem St√ºck Speicher ausf√ºhren
 
 Wann wird dieses Objekt freigegeben:
 
@@ -249,7 +249,7 @@ Wann wird dieses Objekt freigegeben:
         ==> Es gibt in der Tat mehrere REALISIERUNGEN eines solchen GC
 
         a) Desktop Variante:   Faule Variante (Lazy): Erst, wenn der Speicher knapp wird
-        b) Embedded Variante:  Z¸gig, um Engp‰sse im Speicher zu vermeiden.
+        b) Embedded Variante:  Z√ºgig, um Engp√§sse im Speicher zu vermeiden.
 
 // ----------------------------------------------
 
@@ -263,7 +263,7 @@ void tueWas_CSharp()
 void tueWas_Cpp()
 {
     // dieses Objekt liegt am STACK
-    Rectangle rect1 (10, 10, 30, 40);    // rect ist ein vollst‰ndiges Objekt // liegt am STACK !!!
+    Rectangle rect1 (10, 10, 30, 40);    // rect ist ein vollst√§ndiges Objekt // liegt am STACK !!!
 
     // dieses Objekt liegt am HEAP
     // In C++ muss der Typ POINTER konkret definiert werden
@@ -302,7 +302,7 @@ C#:   2-Pass Compiler
 
 C++:  1-Pass Compiler
 
-Alles muss bei einem ‹bersetzungsdurchlauf bekannt sein !!!
+Alles muss bei einem √úbersetzungsdurchlauf bekannt sein !!!
 
 ===========================================================
 
@@ -317,7 +317,7 @@ a) Header-Datei
 
 b) Implementierungs-Datei
 
-   ===> Library // Bin‰rformat
+   ===> Library // Bin√§rformat
 
 Beispiel:
 
@@ -335,7 +335,7 @@ The Return of printf (C#:  println)   // Python
 
 C++ Bibliothek:   STL   Standard Template Library
 
-Template == ‰hnlich zu Generics
+Template == √§hnlich zu Generics
 
 =========================================================
 
@@ -349,12 +349,12 @@ C++: So nicht vorhanden.
 
 Ein Kern Feature der OO:
 
-Jeder Objekt hat zu JEDEM Zeitpunkt G‹LTIGE Werte in seinen
+Jeder Objekt hat zu JEDEM Zeitpunkt G√úLTIGE Werte in seinen
 Instanzvariablen.
 
 a) Initialisierung (Konstruktoren)
 
-b) W‰hrend des Lebensdauer eines Objekts (getter/setter // Analogie: Properties C#)
+b) W√§hrend des Lebensdauer eines Objekts (getter/setter // Analogie: Properties C#)
 
 
 =========================================================
@@ -369,7 +369,7 @@ A) Hat die Klasse KEINEN Konstruktor definiert:
 
 B) Hat die Klasse EINEN oder MEHRERE Konstruktor definiert:
 
-   Dann sind nur die verf¸gbar, die es auch gibt.
+   Dann sind nur die verf√ºgbar, die es auch gibt.
 
 ==============================================================
 
@@ -413,15 +413,15 @@ Pro:
 
 Kontra:
 
-== Eigentlich ist das Header-File f¸r den Benutzer der Klasse konzipiert.
+== Eigentlich ist das Header-File f√ºr den Benutzer der Klasse konzipiert.
    (  inkl. der Implementierung ??? )
 
 =================================================================
 
-‹bergabe von Objekten an Methoden
+√úbergabe von Objekten an Methoden
 ---------------------------------
 
-Parameter¸bergabe:
+Parameter√ºbergabe:
 ------------------
 
 
@@ -436,13 +436,13 @@ C++:    Referenz-basierte Sprache  (Heap  // new // delete)
 
 C++ / C:
 
-Parameter¸bergabe: Per DEFAULT: Call-by-VALUE // Call-by-COPY
+Parameter√ºbergabe: Per DEFAULT: Call-by-VALUE // Call-by-COPY
 
 Wie kann man in Unterprogrammen auf ORIGINALE zugreifen ?????????????
 
 Wir haben per Default:  Call-by-COPY
 
-2 Lˆsungen:
+2 L√∂sungen:
 
 A) Pointer   ( C )     // real C/C++
 
@@ -503,7 +503,7 @@ C:   Pointer-Arithmetik
 
 
          ++ip;   Man kann eine Adresse als ganze Zahl auffassen.
-                 Folglich kann man 1 draufz‰hlen.
+                 Folglich kann man 1 draufz√§hlen.
 
                  1024 => 1025: NEIN
                  1024 => 1028: Korrekt
@@ -535,7 +535,7 @@ Beobachtung: Einmal 'const', immer 'const'
 
 =========================================================
 
-Ist const nur f¸r die Qualit‰t des Codes (Schutz von Originalen) eine Hilfe ???
+Ist const nur f√ºr die Qualit√§t des Codes (Schutz von Originalen) eine Hilfe ???
 
 NEIN.
 
@@ -559,7 +559,7 @@ Ausnahme:  'const'  ==> KEIN schreibender Zugriff auf State
 
 Call by Referenz ist wichtig bei Objekten:
 
-KEINE unn¸tze Kopie.
+KEINE unn√ºtze Kopie.
 
 Wie sieht es bei elementaren Variablen aus ???
 
@@ -567,7 +567,7 @@ Hier ist call-by-Copy SCHNELLER
 
 EAX: Akku // Rechenregister einer CPU // Hauptregister
 
-RAX:  Register f¸r Adressen
+RAX:  Register f√ºr Adressen
 
 Call-by-Copy:
 
@@ -585,7 +585,7 @@ Call-by-Ref:
 
 ==============================================================
 
-‹berladen von Operatoren
+√úberladen von Operatoren
 
 Beispiel:
 
@@ -593,9 +593,9 @@ Vergleich von Objekten
 
 C#:
 
-Universelle Basisklasse Object:   equals  // ‹berschreiben
+Universelle Basisklasse Object:   equals  // √úberschreiben
 
-ƒhnliches zu einem speziellen Operator:  Indexer  // ƒhnlich zum operator[]
+√Ñhnliches zu einem speziellen Operator:  Indexer  // √Ñhnlich zum operator[]
 
 C++:
 
@@ -608,7 +608,7 @@ Name der Methode:  operator ==
 
 BEMERKUNG: 
 
-Es gibt ZWEI Mˆglichkeiten, Operatoren zu ‹berladen:
+Es gibt ZWEI M√∂glichkeiten, Operatoren zu √úberladen:
 
 a) Als "Methode" der Klasse
 
@@ -619,7 +619,7 @@ B) Als globale Funktion
 
 Scharfes Schwert:   friendship   Keyword:   friend       // Clean Code 
 
-F¸r "Freunde" gilt: Aus private wird public :)
+F√ºr "Freunde" gilt: Aus private wird public :)
 
 =================================================================
 
@@ -630,7 +630,7 @@ Dynamische Daten
 
 ACHTUNG:
 
-Es gibt new und delete in ZWEI Auspr‰gungen !!!
+Es gibt new und delete in ZWEI Auspr√§gungen !!!
 
 new typ    Skalare new
 delete ptr
@@ -680,5 +680,243 @@ cp:     2000
 
 cp + 1: 2001
 
-11:05
-=====
+=================================================================
+
+Betrachtung:
+
+== Klassen verwalten Daten
+
+== Sind dies elementare Variablen:
+
+   zB: Klasse Time
+
+== Sind dies dynamische Variablen:
+
+   Da wird es etwas komplexer - im Vergleich zu C#
+
+   (( Maschinenraum von C++ ))
+
+Beispiel:
+
+Klasse BigData
+
+== Verwaltet ein Feld von int-Variablen
+
+== Wieviele: Unbekannt, bzw. wird durch einen Konstruktor-Aufruf mitgeteilt.
+
+
+Destruktor  // Finalizer
+
+Diese Methode wird aufgerufen, wenn ein Objekt zerst√∂rt wird.
+
+Why not in C#:  Ein Objekt wird in C# zerst√∂rt, wenn der GC aktiv ist.
+
+                Nicht-deterministisch. Wann ???????????????
+
+C++: Die Zerst√∂rung ist DETERMINISTISCH.
+
+==============================================================
+
+Zwei weitere Aspekte:
+
+== Das Kopieren von Objekten
+== Die Wertzuweisung von Objekten
+
+VORAB:   C#
+
+A) Kopieren: Gibt es so nicht in C#:
+
+   interface ICloneable:  clone 
+
+B) Wertzuweisung:
+
+   Time t = new Time(12, 0, 0,);
+
+   Time t2;
+
+   t2 = t;   // Geht // Wort "Kopie" ?!?!?!
+
+In C++: 
+
+   Time t (12, 0, 0,);
+
+   Time t2;
+
+   t2 = t;   // Geht das in C++: Ja, das geht
+
+
+
+
+
+// =============================================
+
+Beispiel:
+
+0x0000024256051190
+
+new agiert mit der Freispeicherverwaltung.
+
+Diese verwaltet gro√üe Bl√∂cke an Speicher.
+
+Ein Zeiger wird von der Freispeicherverwaltung reserviert ...
+und die Reservierung kann wieder zur√ºchgezogen werden.
+
+===> Danach ist dieser Zeiger NICHT mehr g√ºltig.
+
+REGEL:   EIN new , EIN delete !!!!!!!!!!!!!!!!!!!!!!!!!
+
+// =============================================
+
+Muss ich diese - nicht ganz triviale - Implementierung in C++ IMMER machen ????
+
+==> Es gibt in der STL viele √§hnlichen Klassen wie 'BigData':
+    Die machen das Automatisch.
+
+==> Modern C++: Smart Pointer:  std::shared, std::unique 
+
+==> Wenn ich in meinen Klassen new auf diese Weise EXPLIZIT Verwende:
+
+    Ja.
+
+// =============================================
+
+Neben der Zuweisung:   operator=
+
+m√ºssen wir analog den Kopier-Konstruktor betrachten.
+
+// =============================================
+
+Bibliothek
+
+Maschinenraum von C++:  ‚ÄûRule of Three‚Äù
+
+==============================================
+
+Alternative:
+
+int* m_data;
+int  m_counter;
+
+0 => 1 => 2 => 3 => 2 => 1 => 0
+
+
+DESTRUKTOR:
+{
+   m_counter --;
+
+   if (m_counter == 0) {
+       delete [] m_data ;
+   }
+}
+
+==============================================
+
+Mittwoch:
+
+Walk-Through: Modern C++
+
+Templates  // Generics
+
+C++:  STL  // No.
+
+==============================================
+
+STL:  Es ist Standard Bibliothek.
+
+Sie ist in ihrer Struktur etwas "eigen".
+
+==============================================
+
+√úberblick:
+
+https://github.com/pelocpp/cpp_clean_performant_secure/blob/master/Clean_Performant_Code/Data_Structures_and_Algorithms/Readme_STL_Container.md
+
+== Container
+
+== Iteratoren // √§hnlich zu C#
+
+== Algorithmen ( suchen, durchlaufen, kopieren, vorbelegen, .... )
+
+== Aufrufbare Objekte 
+
+
+
+Hash-Tabelle:
+
+Schl√ºssel ==> Wert   (key, value)
+
+=========================================================
+
+Architektur:
+
+Ziel: Transparenz
+
+== Will einen Container durchlaufen // traversieren
+
+== Das Vorgehen ist f√ºr alle Container dasselbe
+
+Container:
+
+Vektoren:  Linear / hintereinander angeordnet
+
+Bin√§ren Baum:  std::map
+
+Hash-Tabelle:  std::unordered_map
+
+Linked List:   std::list  // std::forward_list
+
+Linked List list:   list[3]  ginge mit Gewalt.
+
+        Aber warum tut man das nicht ????
+
+        O-Notation: Was w√§re eine schlechte Performanz.
+
+        O(n ‚àó log n) ‚Äì Quasi-linearer Aufwand  wird maximal noch unterst√ºtzt.
+
+        Alles, was schlechter (langsamer) ist, wird NICHT unterst√ºtzt.
+
+// ==============================================================
+
+Was ist /in C++/ ein Iterator???
+
+Beschreibt eine POSITION in einem Container.
+
+Achtung: Das ist nicht der WERT an dieser Position.
+
+Was kann man mit einer Position machen ???
+
+C#:
+
+public object Current { get; }
+public bool MoveNext();
+
+C++:
+
+Wert-von:                      * Operator  // Dereferenzieren:  Referenz
+
+Move Next:                     operator ++
+
+Vergleich zweier Positionen:   operator ==
+
+Wie erhalte ich eine Position eines Containers ???????
+
+2 spezielle Methoden:
+
+begin()   Position des ERSTEN Elements
+end()     Position des LETZEN Elements  // Exakt: Nach dem letzen  // Nirvana
+
+Von welchem Typ ist eine Position ?????
+
+Jeder Container bringt hierf√ºr seinen eigenen Datentyp mit.
+
+Trick, damit ich ich nicht "Anzahl der Container"  neue Klassen lernen muss:
+
+
+
+// Neuland
+
+Algorithmen
+
+√úbung
+
+15:10
