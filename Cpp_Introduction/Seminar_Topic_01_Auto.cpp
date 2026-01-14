@@ -13,6 +13,27 @@ namespace Auto_Examples {
 
     static void test_01() {
 
+
+        auto x = 123;
+
+        auto y = 123.345f;   // Type Deduction
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         // type deduction / type inference
 
         auto a = 1;                  // int
@@ -20,7 +41,9 @@ namespace Auto_Examples {
         auto c = 2.0;                // double
         auto d = 2.0f;               // float
         auto e = 'A';                // char
-        auto f = "hi";               // char const*
+
+        auto f = "hi";               //  const char*   // Da gab es schon in C: Anfangsadresse
+
         auto g = true;               // bool
 
         auto list = { 1, 2, 3 };     // std::initializer_list<int>
@@ -46,7 +69,7 @@ namespace Auto_Examples {
 
         auto n{ 123 };                   // n is type of int
 
-        auto result{ getFunction() };    // result is type of ...
+        auto result = getFunction();    // result is type of ...
 
         std::map<int, std::string> result2{
             getFunction()
@@ -57,11 +80,13 @@ namespace Auto_Examples {
 
     static void test_03() {
 
+        // Dictionary // Binärer Baum // (Schlüssel/Wert) // std::pair<int, std::string>
         std::map<int, std::string> anotherMap{ { 1, "Hello"  } };
 
         std::map<int, std::string>::iterator it = anotherMap.begin();
 
-        // std::pair<int, std::string>& entry1 = *it;  // Why this line DOES NOT compile ???
+        // A) KOPIE B) Typkonvertierung:  const int ==> int
+        //std::pair<int, std::string>& entry1 = *it;  // Why this line DOES NOT compile ???
 
         auto& entry2 = *it;
     }
@@ -70,8 +95,28 @@ namespace Auto_Examples {
 
     static auto sum(float f1, float f2)
     {
-        return f1 + f2;
+        return f1 + f2;    // 2 Mal Max-Float: Überlauf // UB // Undefined Behaviour
     }
+
+    // Die Breite des int-Datentyps in C/C++ ist implementierungsabhängig
+    static auto sum2Creepy(short s1, short s2)
+    {
+        return s1 + s2;    // 2 Mal Max-Float: Überlauf // UB // Undefined Behaviour
+    }
+
+    static auto sum2Real(int i1, int i2)
+    {
+        return i1 + i2;    // 2 Mal Max-Float: Überlauf // UB // Undefined Behaviour
+    }
+
+
+
+    // Kann eine CPU mit 16-Bit Werten rechnen // Arithmetik betreiben: +, *,...
+    // NEIN.
+    // CPU: Rechenregister: Akkumulator (anhäufen)
+    // Bit-Breite:  64-Bit Rechner
+
+
 
     static auto foo(bool flag, float f, double d) -> double
     {
@@ -140,6 +185,54 @@ namespace Auto_Examples {
     }
 
     // ---------------------------------------------------------------------
+
+    class Person
+    {
+    private:
+        std::string m_name;   // Vor fremdem Zugriff schützen
+
+    public:
+        // c'tor
+        Person (const std::string& name) 
+            : m_name(name) 
+        {}
+
+        // getter
+        // go for this style
+        const std::string& getName() {
+            return m_name; 
+        }
+
+        // Hmmm, da wird eine KOPIE zurückgegeben
+        std::string getNameAlternate() {
+            return m_name;
+        }
+    };
+
+    void test_loss_of_reference()
+    {
+        Person hans("Hans");   // STACK 
+                               // Wo liegt der Name: Auch auf dem Stack
+
+        const std::string& s = hans.getName();
+        // s[0] = 'h';
+        char first = s[0];
+    }
+
+    void test_loss_of_reference_there_is_more()
+    {
+        Person hans("Hans");
+
+        auto name2 = hans.getName();
+
+        const auto& name = hans.getName();
+       // name[0] = 'h';
+    }
+
+
+
+
+
 
     const std::string message{ "This is an important message :)" };
 
@@ -245,6 +338,12 @@ namespace Auto_Examples {
 void main_auto()
 {
     using namespace Auto_Examples;
+
+    test_loss_of_reference_there_is_more();
+   // test_loss_of_reference();
+    return;
+    
+
     test_01();
     test_02();
     test_03();

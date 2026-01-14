@@ -3,6 +3,21 @@
 
 Peter Loos
 
+Unterlagen:
+
+https://github.com/pelocpp
+
+Dieses Seminar:
+
+https://github.com/pelocpp/cpp_introduction
+
+Modern C++:
+
+https://github.com/pelocpp/cpp_modern
+
+=================================================
+
+
 30+ Jahre // 20 Jahre Production (C/C++)
              20 Teaching // Java, C#, JavaScript, Mobile Apps (Android), Flutter (Dart)
 
@@ -32,8 +47,16 @@ Ziel: C++ kennen lernen
 
 ToDo-Liste:
 
-this: check
+auto: check
+lambda :check
+Neue Form der Initialisierung check
 
+
+std::initializer_list<int>
+range-based for loop
+Utility-Klassen
+Folding
+ 
 =====================================================
 
 Mittagspause: 12.30 
@@ -1021,4 +1044,302 @@ public:
 };
 
 
+===========================================
+===========================================
+
+Zäsur: Classic C++
+
+Array:
+
+C++:
+
+int numbers[100];                    // Fixed-Size !!!  GLOBAL // STACK
+
+int* numbersHeap = new int[100];     // Fixed-Size !!!  HEAP  // delete[] nicht vergessen
+
+
+C#:
+
+int[] numbers = new int[100];        // auch Fixed-Size !!!  HEAP
+
+==============================================================
+
+Vererbung:
+
+Technisch: genauso ...
+
+C#: Merkmal / Feature:
+
+Basisklasse Object
+
+Die Klasse System.Object 
+Die Equals-Methode
+Die GetHashCode-Methode 
+Die ToString-Methode
+Die GetType-Methode 
+Die ReferenceEquals-Methode 
+Die MemberwiseClone-Methode 
+
+Mögliche Analogie zu C++:
+
+Die Equals-Methode:  operator==  / operator!=
+Die GetHashCode-Methode : Keine Analogie
+
+Konsequenz:  std::map // std::unordered_map: Standardklassen haben eine "versteckte" GetHashCode-Methode
+
+          std::hash ist zu unterstützen von benutzer-definierten Klassen
+
+          Beispiel:
+
+template <>
+struct hash<CowString>
+{
+    // Note: std::hash<const char*> hashes the pointer value, not the characters it points to
+    // Workaround: let's use std::string_view
+
+    std::size_t operator() (const CowString& cs) const {
+
+        std::string_view sv{ cs };
+        std::size_t h{ std::hash<std::string_view>{}(sv) };
+        return h;
+    }
+};
+
+
+Beispiel:
+
+Deep-Dive:  Kopieren:  Kopier-Konstruktor
+
+class Time:    Automatisch unterstützt:  Flache Kopie, die es tut
+class BigData: Würde automatisch unterstützt werden, aber falsch : Flache Kopie
+
+               Kopier-Konstruktor selbst korrekt schreiben
+
+Dritte Variante: Faules Kopieren // Lazy Copy:   Copy-On-Write
+
+COWString:     ==> Dictionaries  (aufheben): Geht erst mal nicht.
+
+====================================
+
+Die ToString-Methode: Keine Analogie
+
+std::string toString()
+
+
+Die GetType-Methode : Reflection
+
+C++: : Keine Analogie
+
+VORSICHT:  Reflection for C++26
+
+
+
+class Foo
+
+Wirklichkeit:
+
+class Foo : Object
+
+C++:
+
+Nicht vorhanden.
+
+class Foo // Keine Basisklasse
+
+Die ReferenceEquals-Methode : Keine Analogie
+
+Die MemberwiseClone-Methode : Analogie:  (schwach): Kopier-Konstruktor
+
+==========================================================================
+
+Classic C++ zu Modern C++:
+
+auto
+Lambda
+
+===========================================================================
+
+
+auto:
+
+Unterlage:
+
+https://github.com/pelocpp/cpp_modern/blob/master/GeneralSnippets/Auto/Auto.md
+
+Vorsicht:
+
+JavaScript:   KEINE Compile-Time Datentypen
+-----------
+
+Dynmamischer Typ // Runtime-Time
+
+var n = 123;
+
+let k = "erwerwe";
+    k = 123.123;
+
+
+VORSICHT: auto ist KEIN Dynmamischer Typ 
+
+
+==============================================
+
+auto:
+
+i)   Vereinbarung von VAriablen
+ii)  Rückgabetyp
+iii) Bei Parametern
+
+==============================================
+
+Verlust von const und & (Referenz) bei auto
+-------------------------------------------
+
+
+==============================================
+
+Neue Form der Initialisierung
+
+https://github.com/pelocpp/cpp_modern/blob/master/GeneralSnippets/BraceInitialization/BraceInitialization.md
+
+Ab C++ 11:
+
+Neuen Ansatz:  Geschweiften Klammern
+
+Einheitliches Init. Konzept  // Uniform // Brace
+
+Alte Syntax: Geht natürlich weiter ....
+
+==============================================
+
+Achtung: struct   // C++ vs. C#
+
+Sind sehr unterschiedlich:
+
+C#: struct ist ein Value-Type: Eine struct-Variable in C#
+    liegt am Stack.
+
+In zB den Libs. Windows Forms, WPF gibt es viele "kleine" Objekte:
+
+Point (10, 20)
+Size (10, 20)
+Line 
+Rectangle
+
+int, double: Value-Type  (CTS, Common Type System)
+
+Object ==> ValueType // ReferenceType  ==> 
+
+Würden all diese Objekte am HEAP liegen:  Das würde in vielerlei Hinsicht unperformant.
+
+Bremse: Kleine Daten auf den Stack
+
+==============================================
+
+Was ist eine struct in C++:
+
+Wurde von C übernommen:
+
+Verbunddatentyp:
+
+struct Time
+{
+   int hours;
+   int minutes;
+   int seconds;
+}
+
+Besteht NUR aus Variablen.
+
+struct Time now;
+
+struct Time* pnow = new struct Time;  
+
+==============================================
+
+Converts a signed doubleword integer (or signed quadword integer if operand size is 64 bits) in the “convert-from” source operand to a double precision
+
+    
+==============================================
+
+C#:   Features:  delegates und events
+
+C++:  Nope
+
+==============================================
+
+Lambda:
+=======
+
+https://github.com/pelocpp/cpp_modern/blob/master/GeneralSnippets/Lambda/Lambda.md
+
+a) Syntax // Kochrezept
+
+b) Hinter die Kulissen
+
+Why: Viele der "neuen" C++ Konzepte werden auf Vorhandenes abgebildet.
+
+Beispiel:
+
+Sortieren eines Containers:
+
+std::sort
+
+Was ist ein Lambda:
+
+lax:    eine anonyme Methode "inplace"
+
+exakt:  ein Objekt, das den Aufrufoperator operator() besitzt.
+        Die dazugehörige Klasse wird vom Compiler erzeugt.
+        Sie ist für uns anonym.
+
+Für ein echtes Understanding von Modern C++:
+
+Tool:  Cpp Insights
+
+Kein Online Compiler: 
+
+Converter:  C++ Syntax Modern ==> C++ Syntax Classic.
+
+==============================================================
+
+std::initializer_list<T>
+
+https://github.com/pelocpp/cpp_modern/blob/master/GeneralSnippets/InitializerList/InitializerList.md
+
+
+Ein wichtiges, neues Feature:
+
+i)  Variable Anzahl an Werten (Liste)
+
+ii) Performanz
+
+
+
+std::vector:               HEAP
+
+versus
+
+std::initializer_list:     STACK
+
+               Das geht SCHNELLER !!!
+
+
+std::initializer_list ist kein VOLLWERTIGER STL-Container.
+
+std::initializer_list:
+
+    begin()
+    end()
+    size()
+
+
+Stolperfalle:
+-------------
+
+std::vector<int> vec(10);     // size(): 10 - Werte: 0
+
+vs.
+
+std::vector<int> vec{ 10 };   // size(): 1  - Wert: 10
 

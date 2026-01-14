@@ -13,10 +13,13 @@
 
 namespace Lambdas {
 
+    // a) freie Funktion
     static bool compare(int n1, int n2) {
+        std::println("vgl. {} mit {}", n1, n2);
         return n1 < n2;
     }
 
+    // Aufrufbaren Objekts
     class Comparer
     {
     private:
@@ -27,6 +30,7 @@ namespace Lambdas {
         Comparer(bool flag) : m_flag{ flag } {}
 
         bool operator() (int n1, int n2) const {
+            std::println("operator(): vgl. {} mit {}", n1, n2);
             return (m_flag) ? n1 < n2 : n1 > n2;
         }
     };
@@ -75,10 +79,12 @@ namespace Lambdas {
         }
         std::cout << std::endl;
 
+        Comparer myComp{ false };
+
         std::sort(
             vec.begin(),
             vec.end(),
-            Comparer{}  // Comparer{ false }
+            myComp  // Comparer{ false }
         );
 
         for (int n : vec) {
@@ -101,6 +107,7 @@ namespace Lambdas {
             LocalComparer(bool flag) : m_flag{ flag } {}
 
             bool operator() (int n1, int n2) const {
+                std::println("local operator(): vgl. {} mit {}", n1, n2);
                 return (m_flag) ? n1 < n2 : n1 > n2;
             }
         };
@@ -116,6 +123,54 @@ namespace Lambdas {
             vec.begin(),
             vec.end(),
             LocalComparer{}  // LocalComparer{ false }
+        );
+
+        for (int n : vec) {
+            std::cout << n << ' ';
+        }
+    }
+
+    static void test_03_seminar()
+    {
+        // local class within function possible
+        class LocalComparer
+        {
+        private:
+            bool m_flag;
+
+        public:
+            LocalComparer() : m_flag{ true } {}
+            LocalComparer(bool flag) : m_flag{ flag } {}
+
+            bool operator() (int n1, int n2) const {
+                std::println("local operator(): vgl. {} mit {}", n1, n2);
+                return (m_flag) ? n1 < n2 : n1 > n2;
+            }
+        };
+
+        std::vector<int> vec{ 5, 6, 4, 1, 3, 2, 7, 8 };
+
+        for (int n : vec) {
+            std::cout << n << ' ';
+        }
+        std::cout << std::endl;
+
+        //auto myLambda = [](int n1, int n2) {
+        //    std::println("Lambda: vgl. {} mit {}", n1, n2);
+        //    return n1 < n2;
+        //    };
+
+        bool flagDirection = true;
+
+    //    std::string hiddenInfo;
+
+        std::sort(
+            vec.begin(),
+            vec.end(),
+            [=] (int n1, int n2) {
+                std::println("Lambda: vgl. {} mit {}", n1, n2);
+                return (flagDirection) ? n1 < n2 : n1 > n2;       // als KOPIE oder durch eine REFERENZ
+            }
         );
 
         for (int n : vec) {
@@ -173,25 +228,18 @@ namespace Lambdas {
 
     static void test_07() {
 
-        // defining new variables in the lambda capture:
-        // we can declare a new variable that is only visible
-        // in the scope of the lambda: We do so by defining a variable
-        // in the lambda-capture without specifying its type:
-
         // lambda with variable definition
-        auto lambda = [variable = 10]() { return variable; };
+        auto lambda = [variable = 10] () mutable {
+
+            //  int variable = 10;
+            variable++;
+            return variable;
+        };
+        
+        std::cout << lambda() << std::endl;
+        std::cout << lambda() << std::endl;
         std::cout << lambda() << std::endl;
 
-        // Captures default to 'const value':
-        // The mutable keyword removes the 'const' qualification from all captured variables
-        auto counter = [count = 50]() mutable {
-            ++count;
-            return count;
-            };
-
-        for (std::size_t i{}; i < 5; ++i) {
-            std::cout << counter() << " ";
-        }
         std::cout << std::endl;
     }
 
@@ -200,19 +248,19 @@ namespace Lambdas {
         int n = 1;
         int m = 2;
 
-        auto l1 = [=] {
+        auto l1 = [=] () {
             std::cout << "Copy:      " << n << " " << m << std::endl;
             };
 
-        auto l2 = [&] {
+        auto l2 = [&]() {
             std::cout << "Reference: " << n << " " << m << std::endl;
             };
 
-        auto l3 = [&, m] {
+        auto l3 = [&, m]() {
             std::cout << "Both:      " << n << " " << m << std::endl;
             };
 
-        auto l4 = [=, &m] {
+        auto l4 = [=, &m]() {
             std::cout << "More both: " << n << " " << m << std::endl;
             };
 
@@ -232,7 +280,7 @@ namespace Lambdas {
 
         auto lambda = [=] {
             std::cout << "Copy:      " << n << " " << m << std::endl;
-            };
+        };
 
         return lambda;
     }
@@ -246,7 +294,7 @@ namespace Lambdas {
             std::cout << "Reference: " << n << " " << m << std::endl;
             };
 
-        return lambda;  // I would't do this never ever :-)
+        return lambda;                                               // I would't do this never ever :-)
     }
 
     static void test_09() {
@@ -446,21 +494,22 @@ namespace Lambdas {
 void main_lambdas()
 {
     using namespace Lambdas;
-    test_00();
-    test_01();
-    test_02();
-    test_03();
-    test_04();
-    test_05();
-    test_06();
+    //test_00();
+    //test_01();
+    //test_02();
+    //test_03();
+    //test_03_seminar();
+    //test_04();
+    //test_05();
+    //test_06();
     test_07();
-    test_08();
-    test_09();
-    test_10();
-    test_11();
-    test_12();
-    test_13();
-    test_14();
+    //test_08();
+  //  test_09();
+    //test_10();
+    //test_11();
+    //test_12();
+    //test_13();
+    //test_14();
 }
 
 // =====================================================================================

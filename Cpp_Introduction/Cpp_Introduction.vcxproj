@@ -118,6 +118,7 @@
     <ClCompile Include="Exercises\Wallet\Wallet_Main.cpp" />
     <ClCompile Include="HelloWorld\Main.cpp" />
     <ClCompile Include="Inheritance\Main.cpp" />
+    <ClCompile Include="Seminar_Topic_06_InitializerList.cpp" />
     <ClCompile Include="MemoryManagement\Main.cpp" />
     <ClCompile Include="MoreInheritance\Main.cpp" />
     <ClCompile Include="Namespaces\Main.cpp" />
@@ -137,6 +138,7 @@
     <ClCompile Include="Seminar_Topic_02_RValue_LValue.cpp" />
     <ClCompile Include="Seminar_Topic_03_Move_Semantics.cpp" />
     <ClCompile Include="Seminar_Topic_04_Lambdas.cpp" />
+    <ClCompile Include="Seminar_Topic_05_Initialization.cpp" />
     <ClCompile Include="Static\Main.cpp" />
     <ClCompile Include="STL\Main.cpp" />
     <ClCompile Include="Streams\Main.cpp" />

@@ -504,6 +504,12 @@
     <ClCompile Include="Seminar_Topic_04_Lambdas.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Seminar_Topic_05_Initialization.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Seminar_Topic_06_InitializerList.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Constructors\Time.h">

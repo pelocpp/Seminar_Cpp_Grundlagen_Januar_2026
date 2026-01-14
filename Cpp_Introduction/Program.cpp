@@ -44,6 +44,9 @@ void main_auto();
 void main_rvalue_lvalue();
 void main_move_semantics();
 void main_lambdas();
+void main_brace_initialization();
+void main_lambdas();
+void main_initializer_list();
 
 int main()
 {
@@ -52,6 +55,8 @@ int main()
     // main entry points code examples
     try
     {
+        main_initializer_list();
+
         //main_HelloWorld();
         //main_ClassesObjects();
         //main_ProceduralVsOOProgramming();
