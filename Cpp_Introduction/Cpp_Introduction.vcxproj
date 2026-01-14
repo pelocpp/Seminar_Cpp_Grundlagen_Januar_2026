@@ -139,6 +139,7 @@
     <ClCompile Include="Seminar_Topic_03_Move_Semantics.cpp" />
     <ClCompile Include="Seminar_Topic_04_Lambdas.cpp" />
     <ClCompile Include="Seminar_Topic_05_Initialization.cpp" />
+    <ClCompile Include="Seminar_Topic_07_Variadic_Templates.cpp" />
     <ClCompile Include="Static\Main.cpp" />
     <ClCompile Include="STL\Main.cpp" />
     <ClCompile Include="Streams\Main.cpp" />

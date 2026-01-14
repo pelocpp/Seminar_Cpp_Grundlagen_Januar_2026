@@ -510,6 +510,9 @@
     <ClCompile Include="Seminar_Topic_06_InitializerList.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Seminar_Topic_07_Variadic_Templates.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Constructors\Time.h">

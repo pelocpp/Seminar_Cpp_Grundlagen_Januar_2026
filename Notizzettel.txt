@@ -50,13 +50,14 @@ ToDo-Liste:
 auto: check
 lambda :check
 Neue Form der Initialisierung check
-
-
 std::initializer_list<int>
+
 range-based for loop
 Utility-Klassen
 Folding
- 
+constexpr
+Lamdbas mit auto
+
 =====================================================
 
 Mittagspause: 12.30 
@@ -1342,4 +1343,71 @@ std::vector<int> vec(10);     // size(): 10 - Werte: 0
 vs.
 
 std::vector<int> vec{ 10 };   // size(): 1  - Wert: 10
+
+=================================================================
+
+Variadische Templates
+=====================
+
+Auch in C++ gibt es eine Sprachfeature mit "3 Punkten"
+
+
+Wir haben oft das Problem:  
+
+Eine Menge von Variablen  // 5 bis 10 Stück
+
+== Will die über einen Methoden-/Funktions-Aufruf im Programm
+   von A nach B transportieren.
+
+== Eine Funktion hat deshalb Parameter:  Anzahl ist FIX.
+
+Ab C++ 11: Variadische Templates
+
+
+    int sum = addierer(1, 2, 3, 4, 5);
+
+Das bekommen wir hin: Nicht mit Core C++ Mitteln.
+
+C++:
+
+== Objekt-Orientierung         Bjarne Stroustrup
+== Generische Programmierung   Alexander Stepanov
+
+C++ ===> Bibliothek:  STL (Stepanov)
+
+=================================================================
+
+Folding
+=======
+
+Folding ist eine Technik, einen arithm. Ausdruck mit Operatoren
+    EFFIZIENT zu berechnen.
+
+Hinweis: Es darf nur EIN Operator sein.
+
+
+int sum = 1 + 2 + 3 + 4 + 5 + 6 + 7 + 8;
+
+int sum = a1 + a2 + a3 + a4 + a5 + a6 + a7 + a8;
+
+Syntax: "Grausam"  - geht nur mit Hilfestellung
+
+
+==========================================================
+
+Übung:
+
+Schreibe eine Funktion:
+
+andAll
+
+bool result = andAll (true, true, true, true, true, true, true, true, true, true);
+
+ergebnis: Wenn alle true ==> true
+
+Wenn einer false: ==> false
+
+bool result = andAll (b1, b2, b3, b4, b5);
+
+ergebnis: b1 && b2 && b3 && b4 && b5    <==== Folding - Ausdruck
 

@@ -47,6 +47,7 @@ void main_lambdas();
 void main_brace_initialization();
 void main_lambdas();
 void main_initializer_list();
+void main_variadic_templates();
 
 int main()
 {
@@ -55,7 +56,7 @@ int main()
     // main entry points code examples
     try
     {
-        main_initializer_list();
+        main_variadic_templates();
 
         //main_HelloWorld();
         //main_ClassesObjects();
