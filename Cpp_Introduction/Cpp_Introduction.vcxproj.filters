@@ -513,6 +513,24 @@
     <ClCompile Include="Seminar_Topic_07_Variadic_Templates.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Seminar_Topic_08_constexpr.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Seminar_Topic_08_CRC.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Seminar_Topic_09_Performance.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Seminar_Topic_10_Optional.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Seminar_Topic_11_StructuredBinding.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Seminar_Topic_12_Variant.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Constructors\Time.h">
@@ -571,6 +589,9 @@
     </ClInclude>
     <ClInclude Include="Exercises\DynamicIntArray\DynamicIntArray.h">
       <Filter>Excercises\DynamicIntArray</Filter>
+    </ClInclude>
+    <ClInclude Include="ScopedTimer.h">
+      <Filter>Source Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

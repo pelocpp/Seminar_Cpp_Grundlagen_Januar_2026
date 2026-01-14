@@ -48,6 +48,11 @@ void main_brace_initialization();
 void main_lambdas();
 void main_initializer_list();
 void main_variadic_templates();
+void main_constexpr();
+void main_algorithms();
+void main_optional();
+void main_structured_binding();
+void main_variant();
 
 int main()
 {
@@ -56,7 +61,7 @@ int main()
     // main entry points code examples
     try
     {
-        main_variadic_templates();
+        main_variant();
 
         //main_HelloWorld();
         //main_ClassesObjects();

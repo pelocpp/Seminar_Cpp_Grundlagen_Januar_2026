@@ -72,6 +72,28 @@ auto addiererFoldingVeryModern(auto ... args)
 }
 
 
+auto subtrahiererFolding(auto ... args)
+{
+    int result{};
+
+    // (1 - 2) - 3 = -4
+    // 1 - (2 - 3) = +2 
+
+    result = (args - ...);
+
+    return result;
+}
+
+void printer(auto ... args)
+{
+    // (((init op pack1) op pack2) op ...) op packN
+    // init: Wahlfreies Objekt
+
+    // ((std::cout << 1) << 2) << 3;
+
+    (std::cout << ... << args);
+}
+
 void main_variadic_templates_01()
 {
     // Aufruf:
@@ -83,6 +105,10 @@ void main_variadic_templates_01()
     sum = addiererFolding(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
 
     sum = addiererFoldingVeryModern(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+
+    int result = subtrahiererFolding(1, 2, 3);
+
+    printer(1, 2, 3, 4, 5, 6, 7, 8);
 }
 
 void main_variadic_templates()

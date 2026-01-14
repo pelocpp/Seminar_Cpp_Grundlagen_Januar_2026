@@ -3,6 +3,9 @@
 
 Peter Loos
 
+peter.loos@gmx.de
+-----------------
+
 Unterlagen:
 
 https://github.com/pelocpp
@@ -51,12 +54,14 @@ auto: check
 lambda :check
 Neue Form der Initialisierung check
 std::initializer_list<int>
+Folding
+auto als Parameter
+constexpr
+
 
 range-based for loop
 Utility-Klassen
-Folding
-constexpr
-Lamdbas mit auto
+std::variant
 
 =====================================================
 
@@ -1411,3 +1416,134 @@ bool result = andAll (b1, b2, b3, b4, b5);
 
 ergebnis: b1 && b2 && b3 && b4 && b5    <==== Folding - Ausdruck
 
+==========================================================
+
+constexpr:
+
+https://github.com/pelocpp/cpp_modern/blob/master/GeneralSnippets/ConstExpr/Constexpr.md
+
+Cooles Feature:  Ausführung von Funktionen, Methoden, Erzeugen von Objekten
+
+                 zur ÜBERSETZUNGSZEIT ?!?!?!
+
+
+
+        constexpr Complex c3{ c1 + c2 };
+00007FF6B6758640  movss       xmm0,dword ptr [__real@40800000 (07FF6B67FC6CCh)]    4.0
+00007FF6B6758648  movss       dword ptr [c3],xmm0  
+00007FF6B6758650  movss       xmm0,dword ptr [__real@40a00000 (07FF6B67FC6D0h)]     5.0
+00007FF6B6758658  movss       dword ptr [rbp+8Ch],xmm0  
+
+versus
+
+        Complex c3{ c1 + c2 };
+00007FF7B681810F  lea         r8,[c2]     lea: Load Effective Address
+00007FF7B6818113  lea         rdx,[c3]  
+00007FF7B681811A  lea         rcx,[c1]  
+00007FF7B681811E  call        ConstExprClassesAndObjects::Complex::operator+ (07FF7B677DEB2h)  
+
+
+Ganze Zahlen:   Zweier-Komplement
+
+Gleitpunkt:     IEEE
+
+
+Why // Wozu ...
+
+Was für Anwendungen gibt es für constexpr
+
+Programm: Tabellen 
+
+=============================================================================
+
+Demo:
+
+== Performanz C++
+== Vergleich verschiedener Realisierungen
+== Mächtigkeit der STL
+
+u.a. auch mit Parallelisierung:
+
+https://github.com/pelocpp/cpp_concurrency/blob/master/Programs/09_STL_ParallelAlgorithms/Readme.md
+
+Zweite Art der For-Schleife:
+
+for - each:
+
+SYNTAX:
+
+for ( auto elem&  : STL-Container ) {
+}
+
+====================================================================
+
+C#:  int
+
+Es gibt auch int? als Datentyp: Nullable
+
+int value;
+
+value = 123;
+
+value = 0;
+
+value = -1;
+
+value = - Max_Int;
+
+Problem:
+
+int  value;
+bool isValid;
+
+verpackt in einer Klasse.
+
+Contact:
+
+std::string festnetz = "";
+std::string mobil_pri;
+std::string mobile_dienst;
+std::string festnetz_dienst;
+
+
+=====================================================
+
+Structured Binding
+
+https://github.com/pelocpp/cpp_modern/blob/master/GeneralSnippets/StructuredBinding/StructuredBinding.md
+
+C++: Aggregat Typen
+
+
+=====================================================
+
+
+Was ist ein Variant:
+
+Kann mehrere Werte aufnehmen, zu EINEM Zeitpunkt aber nur EINEN Wert.
+
+Beispiel:
+
+Excel // Google Sheets:
+
+Zelle: Cell
+
+Typ:  Zeichenkette, numerisch, Währung (Currency), Datum,....  std::variant
+
+// Free-Style Variant:  std::any
+
+======================================================
+
+Metaprogramming
+
+Programmieren mit Datentypen 
+
+// C#: Reflection
+
+C++:  Metaprogramming: Für Arme
+
+======================================================
+
+C++ ist keine einfache Sprache
+
+======================================================

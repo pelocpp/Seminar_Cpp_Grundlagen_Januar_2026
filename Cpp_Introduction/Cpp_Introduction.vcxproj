@@ -140,6 +140,12 @@
     <ClCompile Include="Seminar_Topic_04_Lambdas.cpp" />
     <ClCompile Include="Seminar_Topic_05_Initialization.cpp" />
     <ClCompile Include="Seminar_Topic_07_Variadic_Templates.cpp" />
+    <ClCompile Include="Seminar_Topic_08_CRC.cpp" />
+    <ClCompile Include="Seminar_Topic_08_constexpr.cpp" />
+    <ClCompile Include="Seminar_Topic_09_Performance.cpp" />
+    <ClCompile Include="Seminar_Topic_10_Optional.cpp" />
+    <ClCompile Include="Seminar_Topic_11_StructuredBinding.cpp" />
+    <ClCompile Include="Seminar_Topic_12_Variant.cpp" />
     <ClCompile Include="Static\Main.cpp" />
     <ClCompile Include="STL\Main.cpp" />
     <ClCompile Include="Streams\Main.cpp" />
@@ -166,6 +172,7 @@
     <ClInclude Include="OperatorOverloading\Time.h" />
     <ClInclude Include="ParameterPassingTechniques\Time.h" />
     <ClInclude Include="RuleOfThree\BigData.h" />
+    <ClInclude Include="ScopedTimer.h" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="Exercises\String\Resources\String.png" />
@@ -292,6 +299,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
